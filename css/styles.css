@@ -79,6 +79,7 @@ body {
   background-color: #ccc;
   border-radius: 5px;
 }
+/*  */
 
 /* ############################### Footer ############################### */
 .footer-section {
@@ -114,6 +115,7 @@ body {
   padding-bottom: 24px;
 }
 .footer-links-col ul li a {
+  text-decoration: none;
   font-family: var(--font-raleway);
   font-size: var(--font18);
   font-weight: 600;
@@ -122,6 +124,7 @@ body {
   color: var(--grayBB);
 }
 .footer-contact-col ul li a {
+  text-decoration: none;
   font-family: var(--font-oswald);
   font-size: var(--font18);
   font-weight: 600;
@@ -146,6 +149,71 @@ body {
 .logo-footer-col ul li a img {
   padding-right: 10px;
   padding-left: 0;
+}
+/*  */
+/* Hamburger styles */
+.hamburger-lines {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 24px;
+  width: 30px;
+}
+
+.hamburger-lines .line {
+  height: 3px;
+  width: 100%;
+  background: #000;
+  transition: all 0.3s;
+}
+
+.hamburger-lines.active .line1 {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger-lines.active .line2 {
+  opacity: 0;
+}
+
+.hamburger-lines.active .line3 {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Side navigation styles */
+.side-nav {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 75%;
+  height: 100%;
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: left 0.3s;
+  z-index: 999;
+}
+
+.side-nav ul {
+  list-style: none;
+  padding: 20px;
+}
+
+.side-nav ul li {
+  margin-bottom: 20px;
+}
+
+.side-nav ul li a {
+  text-decoration: none;
+  color: #000;
+  font-size: 18px;
+}
+
+.side-nav ul li .nav-btn {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
 }
 
 /* ############################### Responsive ############################### */
@@ -176,5 +244,17 @@ body {
   }
   .navbar .nav-btn {
     margin: 0 !important;
+  }
+  .hamburger-lines {
+    display: flex;
+  }
+
+  .navbar-collapse {
+    display: none;
+  }
+}
+@media (min-width: 992px) {
+  .side-nav {
+    display: none;
   }
 }

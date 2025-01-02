@@ -1,6 +1,6 @@
 <section class="container">
   <nav class="navbar navbar-expand-lg">
-    <div class="container-fluid">
+    <div class="container">
       <!-- Logo on the left -->
       <a class="navbar-brand" href="#"
         ><img
@@ -10,19 +10,23 @@
       /></a>
 
       <!-- Toggle button for mobile view -->
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarNavDropdown"
-        aria-controls="navbarNavDropdown"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
+      <div class="hamburger-lines d-lg-none" id="hamburger">
+        <span class="line line1"></span>
+        <span class="line line2"></span>
+        <span class="line line3"></span>
+      </div>
+      <div class="side-nav" id="sideNav">
+        <ul>
+          <li><a href="#">ABOUT</a></li>
+          <li><a href="#">CASE STUDY</a></li>
+          <li><a href="#">CONTACT US</a></li>
+          <li><button class="btn nav-btn">Let’s Go!</button></li>
+        </ul>
+      </div>
+      <div
+        class="collapse navbar-collapse d-none d-lg-block"
+        id="navbarNavDropdown"
       >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item">
             <a class="nav-link" href="#">ABOUT</a>
