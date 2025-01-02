@@ -76,7 +76,7 @@ body {
 .top-section .top-section-content p{
     font-size: 20px;
     font-weight: 500;
-    color: var(--dark23);
+    color: var(--light-blue);
     text-align: left;
     font-family: var(--font-raleway);
     margin-bottom: 32px;
@@ -112,10 +112,10 @@ body {
 }
 .top-info .main-content p {
     text-transform: uppercase;
-
     font-size: var(--font48);
     font-family: var(--font-oswald);
     font-weight: 500;
+    color: var(--light-blue);
     color: var(--dark23);
 }
 .top-info .main-content p  span{
@@ -131,11 +131,277 @@ body {
 .top-info .secondary-content p{
     font-size: 22px;
     font-weight: 600;
-    color: var(--dark23);
+    color: var(--light-blue);
     font-family: var(--font-raleway);
 }
 
 .top-info .secondary-content p span{
+    color: var(--pink); 
+    font-weight: 700;
+}
+.influence-clients{
+    padding: var(--py100);
+    background-color: var(--bgcolor);
+}
+.influence-clients-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 32px;
+}
+.influence-clients-content h3{
+    text-transform: uppercase;
+    font-size: var(--font48);
+    font-family: var(--font-oswald);
+    font-weight: 500;
+    color: var(--dark23);
+}
+.influence-clients-content h3 span{
     color: var(--pink);
-  
+}
+.influence-clients-image{
+    width: 100%;
+    background-color: white;
+    border-radius: 16px;
+    padding: 66px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.mid-section{
+    padding: var(--py100);
+    background-color: var(--bgcolor);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.mid-section .mid-section-content{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+   justify-content: center;
+}
+.mid-section .mid-section-content h1{
+    font-family: var(--font-oswald);
+    color: var(--dark23);
+    font-size: 48px;
+    margin-bottom: 16px;
+    font-weight: 500;
+    margin-bottom: 16px;
+}
+.mid-section .mid-section-content p{
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--light-blue);
+    text-align: left;
+    font-family: var(--font-raleway);
+    margin-bottom: 32px;
+}
+.mid-section .mid-section-content button {
+    background-color: var(--pink);
+    padding: 12px 28px;
+    border: none;
+    font-family: var(--font-oswald);
+    border-radius: 64px;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--dark23);
+    margin-bottom: 40px;
+    width: 116px;
+}
+
+.roi{
+    padding: var(--py100);
+    background-color: var(--bgcolor);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.roi .roi-content{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+   justify-content: center;
+}
+.roi .roi-content h1{
+    font-family: var(--font-oswald);
+    color: var(--dark23);
+    font-size: 48px;
+    margin-bottom: 16px;
+    font-weight: 500;
+    margin-bottom: 16px;
+}
+.roi .roi-content p{
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--light-blue);
+    text-align: left;
+    font-family: var(--font-raleway);
+    margin-bottom: 32px;
+}
+.roi .roi-content button {
+    background-color: var(--pink);
+    padding: 12px 28px;
+    border: none;
+    font-family: var(--font-oswald);
+    border-radius: 64px;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--dark23);
+    margin-bottom: 40px;
+    width: 116px;
+}
+.roi-card{
+    background-color: white;
+    padding: 40px;
+    border-radius: 24px;
+}
+.roi-card h3{
+    font-size: 28px;
+    color: var(--dark23);
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-family: var(--font-oswald);
+}
+.roi-card p{
+    font-size: 18px;
+    color: var(--light-blue);
+    font-weight: 500;
+    font-family: var(--font-raleway);
+    margin-bottom: 24px;
+}
+.influence-work{
+    padding: var(--py100);
+    background-color: var(--bgcolor);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.influence-work-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 32px;
+}
+.influence-work-content h3{
+    text-transform: uppercase;
+    font-size: var(--font48);
+    font-family: var(--font-oswald);
+    font-weight: 500;
+    color: var(--dark23);
+}
+.influence-work-content h3 span{
+    color: var(--pink);
+}
+.influence-work-content button {
+    background-color: var(--pink);
+    padding: 12px 28px;
+    border: none;
+    font-family: var(--font-oswald);
+    border-radius: 64px;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--dark23);
+    margin-bottom: 40px;
+    width: 116px;
+}
+.case-study-content h4{
+    font-family: var(--font-raleway);
+    font-weight: 600;
+    color: var(--pink);
+    font-size: 18px;
+    margin-bottom: 4px;
+}
+.case-study-content p{
+    font-family: var(--font-oswald);
+    color: var(--dark23);
+    font-weight: 600;
+    font-size: 28px;
+    margin-bottom: 16px;
+}
+.case-study-video {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.case-study-video-insights{
+    padding: 12px 20px;
+    position: absolute;
+    bottom: 16px;
+    background-color: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(50px);
+    display: flex;
+    width: 80%;
+    border-radius: 8px;
+    justify-content: space-between;
+}
+.case-study-video-insights-details h3{
+    font-family: var(--font-raleway);
+    font-weight: 600;
+    color: #E5E5E6;
+    font-size: 16px;
+    margin-bottom: 0px;
+}
+.case-study-video-insights-details h4{
+    font-family: var(--font-oswald);
+    font-weight: 600;
+    color: #fff;
+    font-size: 28px;
+    margin-bottom: 0px;
+}
+.influence-work-content h3{
+    text-transform: uppercase;
+    font-size: var(--font48);
+    font-family: var(--font-oswald);
+    font-weight: 500;
+    color: var(--dark23);
+}
+.influence-banner{
+    padding: var(--py100);
+    background-color: var(--bgcolor);
+    width: 100%;
+}
+.influence-banner-content{
+    background-color: var(--dark23);
+    display: flex;
+    justify-content: space-between;
+    padding: 86px 140px;
+    position: relative;
+    border-radius: 12px;
+}
+.influence-banner-content h3{
+    font-family: var(--font-oswald);
+    font-weight: 600;
+    color: #fff;
+    font-size: 32px;
+    margin-bottom: 0px;
+    text-transform: uppercase;
+}
+.influence-banner-content h3 span{
+    color: var(--pink);
+}
+.influence-banner-content button{
+    background-color: var(--pink);
+    padding: 12px 28px;
+    border: none;
+    font-family: var(--font-oswald);
+    border-radius: 64px;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--dark23);
+    margin-bottom: 40px;
+    width: 116px;
+}
+.influence-banner-content .left-bg{
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.influence-banner-content .right-bg{
+    position: absolute;
+    right: 0;
+    bottom:  0;
 }
