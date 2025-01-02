@@ -1,5 +1,6 @@
 @charset "UTF-8";
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
 * {
   padding: 0;
@@ -13,6 +14,7 @@ body {
 
 :root {
 --font-oswald: "Oswald", serif;
+--font-raleway: "Raleway", serif;
   --font16: 16px;
   --font18: 18px;
   --font20: 20px;
@@ -29,6 +31,7 @@ body {
   --font72: 72px;
   --pink:#E27670;
   --gray54: #545454;
+  --bgcolor: #F2F6F8;
   --dark23: #232323;
   --light-blue: #292E32;
   --white: #fff;
@@ -40,4 +43,99 @@ body {
   --py30: 30px 0;
   --mb16: 16px;
   --mb8: 8px;
+}
+.top-section{
+    padding: var(--py100);
+    background-color: var(--bgcolor);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.partner-logo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.partner-logo img{
+    filter: grayscale(100%);
+}
+.top-section .top-section-content{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+   justify-content: center;
+}
+.top-section .top-section-content h1{
+    font-family: var(--font-oswald);
+    color: var(--dark23);
+    font-size: 60px;
+    margin-bottom: 16px;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+.top-section .top-section-content p{
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--dark23);
+    text-align: left;
+    font-family: var(--font-raleway);
+    margin-bottom: 32px;
+}
+.top-section .top-section-content button {
+    background-color: var(--pink);
+    padding: 12px 28px;
+    border: none;
+    font-family: var(--font-oswald);
+    border-radius: 64px;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--dark23);
+    margin-bottom: 40px;
+    width: 116px;
+}
+.top-section .top-section-content h6{
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--dark23);
+    margin-bottom: 12px;
+}
+
+.top-info{
+    padding: var(--py100);
+    background-color: var(--bgcolor);
+}
+.top-info .main-content{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+   justify-content: center;
+}
+.top-info .main-content p {
+    text-transform: uppercase;
+
+    font-size: var(--font48);
+    font-family: var(--font-oswald);
+    font-weight: 500;
+    color: var(--dark23);
+}
+.top-info .main-content p  span{
+    color: var(--pink);
+}
+.top-info .secondary-content{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+   justify-content: center;
+
+}
+.top-info .secondary-content p{
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--dark23);
+    font-family: var(--font-raleway);
+}
+
+.top-info .secondary-content p span{
+    color: var(--pink);
+  
 }
