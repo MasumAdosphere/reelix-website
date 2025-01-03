@@ -14,48 +14,77 @@ window.addEventListener("scroll", function () {
     navbar.classList.remove("fixed-top");
   }
 });
-
-window.addEventListener("DOMContentLoaded", (e) => {
+document.addEventListener("DOMContentLoaded", function () {
   setTimeout(() => {
-    const openMenu = document.querySelector(".menu-open");
-    const closeMenu = document.querySelector(".menu-close");
-    const menuDiv = document.querySelector(".commonmenu");
-    const menu = document.getElementById("commonmenu-nav");
-    const dropDowns = menu.getElementsByClassName("nav-dropdown");
-    const dropDownsChild = menu.querySelectorAll(".dropdown .nav-dropdown");
-    const mainClassMenu = document.querySelector(".main-nav");
+    const hamburger = document.getElementById("hamburger"); // Hamburger in navbar
+    const sideNav = document.getElementById("sideNav"); // Sidebar element
+    const menuItems = sideNav.querySelectorAll("ul li"); // Sidebar menu items
+    const body = document.body;
+    const sideHamburger = document.getElementById("sideHamburger"); // Hamburger inside sidebar
 
-    openMenu.addEventListener("click", menuToggle);
-    closeMenu.addEventListener("click", menuToggle);
+    // Toggle sidebar visibility when clicking the hamburger button (in navbar)
+    hamburger.addEventListener("click", () => {
+      toggleSidebar();
+    });
 
-    document.body.insertAdjacentHTML(
-      "beforeend",
-      "<div id='menu-overlay'></div>"
-    );
-    document
-      .querySelector("#menu-overlay")
-      .addEventListener("click", menuToggle);
-
-    function menuToggle() {
-      menuDiv.classList.toggle("active");
-      document.body.classList.toggle("hide-scrolling");
-      document.body.classList.toggle("mobile-menu-active");
-      document.getElementById("menu-overlay").classList.toggle("show");
-    }
-
-    for (var i = 0; i < dropDownsChild.length; i++) {
-      dropDownsChild[i].classList.add("child");
-      dropDownsChild[i].addEventListener("click", function () {
-        this.classList.toggle("opened");
+    // Toggle sidebar visibility when clicking the hamburger inside the sidebar
+    if (sideHamburger) {
+      sideHamburger.addEventListener("click", () => {
+        toggleSidebar();
       });
     }
-    for (var i = 0; i < dropDowns.length; i++) {
-      if (!dropDowns[i].classList.contains("child")) {
-        dropDowns[i].classList.add("parent");
-        dropDowns[i].addEventListener("click", function () {
-          this.classList.toggle("opened");
-        });
+
+    // Function to toggle the sidebar open/close
+    function toggleSidebar() {
+      hamburger.classList.toggle("active"); // Toggle hamburger icon (navbar)
+      if (sideHamburger) {
+        sideHamburger.classList.toggle("active"); // Toggle the hamburger inside the sidebar
+      }
+
+      // Toggle the sidebar's visibility
+      const currentLeft = window.getComputedStyle(sideNav).left;
+      if (currentLeft === "0px") {
+        sideNav.style.left = "-100%"; // Hide the sidebar
+        sideNav.classList.remove("open"); // Remove open class for shadow
+        body.classList.remove("side-nav-open"); // Remove overlay background
+      } else {
+        sideNav.style.left = "0px"; // Show the sidebar
+        sideNav.classList.add("open"); // Add open class for shadow
+        body.classList.add("side-nav-open"); // Add overlay background
       }
     }
-  }, 1000); // Adjust the delay time (in milliseconds) as needed
+
+    // Close sidebar when clicking a menu item inside the sidebar
+    menuItems.forEach((item) => {
+      item.addEventListener("click", () => {
+        // Close the sidebar
+        sideNav.style.left = "-100%"; // Hide the sidebar
+        sideNav.classList.remove("open"); // Remove open class for shadow
+        hamburger.classList.remove("active"); // Reset the hamburger icon in navbar
+        if (sideHamburger) {
+          sideHamburger.classList.remove("active"); // Reset the hamburger icon in sidebar
+        }
+        body.classList.remove("side-nav-open"); // Remove overlay background
+      });
+    });
+
+    // Close sidebar if click outside the sidebar
+    document.addEventListener("click", function (e) {
+      if (
+        !sideNav.contains(e.target) &&
+        !hamburger.contains(e.target) &&
+        !sideHamburger.contains(e.target)
+      ) {
+        sideNav.style.left = "-100%"; // Hide the sidebar
+        sideNav.classList.remove("open"); // Remove open class for shadow
+        body.classList.remove("side-nav-open"); // Remove overlay background
+
+        // Reset both hamburger icons to default
+        hamburger.classList.remove("active");
+        if (sideHamburger) {
+          sideHamburger.classList.remove("active");
+        }
+      }
+    });
+  }, 1000); // Delay of 1 second for the document to load
 });

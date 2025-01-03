@@ -79,6 +79,77 @@ body {
   background-color: #ccc;
   border-radius: 5px;
 }
+/*  */
+/* Hamburger styles */
+/* Hamburger Icon Styles */
+.hamburger-lines {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 24px;
+  width: 30px;
+}
+
+.hamburger-lines .line {
+  height: 3px;
+  width: 100%;
+  background: #000;
+  transition: all 0.3s ease;
+}
+
+.hamburger-lines.active .line1 {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger-lines.active .line2 {
+  opacity: 0;
+}
+
+.hamburger-lines.active .line3 {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Side Navigation Styles */
+.side-nav {
+  position: fixed;
+  top: 0;
+  left: -100%; /* Initially hide the sidebar off-screen */
+  width: 75%;
+  height: 100%;
+  background: #fff;
+  transition: left 0.3s ease;
+  z-index: 999;
+  padding: 20px;
+}
+
+.side-nav ul {
+  list-style: none;
+  padding: 20px 0;
+}
+
+.side-nav ul li {
+  margin-bottom: 20px;
+}
+
+.side-nav ul li a {
+  text-decoration: none;
+  color: #000;
+  font-size: 18px;
+}
+
+.side-nav ul li .nav-btn {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+/* Body styles when side-nav is open */
+body.side-nav-open {
+  overflow: hidden; /* Prevent scrolling when the side nav is open */
+}
 
 /* ############################### Footer ############################### */
 .footer-section {
@@ -114,6 +185,7 @@ body {
   padding-bottom: 24px;
 }
 .footer-links-col ul li a {
+  text-decoration: none;
   font-family: var(--font-raleway);
   font-size: var(--font18);
   font-weight: 600;
@@ -122,6 +194,7 @@ body {
   color: var(--grayBB);
 }
 .footer-contact-col ul li a {
+  text-decoration: none;
   font-family: var(--font-oswald);
   font-size: var(--font18);
   font-weight: 600;
@@ -146,6 +219,100 @@ body {
 .logo-footer-col ul li a img {
   padding-right: 10px;
   padding-left: 0;
+}
+/*  */
+/* Hamburger styles */
+.hamburger-lines {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 24px;
+  width: 30px;
+}
+
+.hamburger-lines .line {
+  height: 3px;
+  width: 100%;
+  background: #000;
+  transition: all 0.3s;
+}
+
+.hamburger-lines.active .line1 {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger-lines.active .line2 {
+  opacity: 0;
+}
+
+.hamburger-lines.active .line3 {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Side navigation styles */
+.side-nav {
+  position: fixed;
+  padding: 20px 16px;
+  top: 0;
+  left: -100%;
+  width: 90%;
+  height: 100%;
+  background: #fff;
+  transition: left 0.3s ease;
+  z-index: 999;
+}
+
+.side-nav ul {
+  list-style: none;
+  padding: 20px;
+  text-align: center;
+}
+
+.side-nav ul li {
+  margin-bottom: 20px;
+  font-size: var(--font20);
+  font-weight: 600;
+  font-family: var(--font-oswald);
+  line-height: 30px;
+  color: var(--dark23);
+  padding-left: 48px !important;
+}
+
+.side-nav ul li a {
+  text-decoration: none;
+  color: #000;
+  font-size: 18px;
+}
+
+.side-nav ul li .nav-btn {
+  background-color: var(--pink);
+  font-size: var(--font18);
+  font-family: var(--font-oswald);
+  line-height: 26.68px;
+  font-weight: 600;
+  padding: 12px 28px;
+  border-radius: 63px;
+  color: var(--dark23);
+}
+/* Body styles when side-nav is open */
+.side-nav.open {
+  left: 0; /* Show the sidebar */
+  box-shadow: 4px 0px 15px rgba(0, 0, 0, 0.6); /* Add shadow */
+}
+
+body.side-nav-open {
+  overflow: hidden; /* Prevent scrolling when the side nav is open */
+}
+body.side-nav-open::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+  z-index: 998;
 }
 
 /* ############################### Responsive ############################### */
@@ -176,5 +343,17 @@ body {
   }
   .navbar .nav-btn {
     margin: 0 !important;
+  }
+  .hamburger-lines {
+    display: flex;
+  }
+
+  .navbar-collapse {
+    display: none;
+  }
+}
+@media (min-width: 992px) {
+  .side-nav {
+    display: none;
   }
 }
