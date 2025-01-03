@@ -81,6 +81,7 @@ body {
 }
 /*  */
 /* Hamburger styles */
+/* Hamburger Icon Styles */
 .hamburger-lines {
   cursor: pointer;
   display: flex;
@@ -94,7 +95,7 @@ body {
   height: 3px;
   width: 100%;
   background: #000;
-  transition: all 0.3s;
+  transition: all 0.3s ease;
 }
 
 .hamburger-lines.active .line1 {
@@ -109,21 +110,22 @@ body {
   transform: rotate(-45deg) translate(5px, -5px);
 }
 
-/* Side navigation styles */
+/* Side Navigation Styles */
 .side-nav {
   position: fixed;
   top: 0;
-  left: -100%;
+  left: -100%; /* Initially hide the sidebar off-screen */
   width: 75%;
   height: 100%;
   background: #fff;
   transition: left 0.3s ease;
   z-index: 999;
+  padding: 20px;
 }
 
 .side-nav ul {
   list-style: none;
-  padding: 20px;
+  padding: 20px 0;
 }
 
 .side-nav ul li {
@@ -142,6 +144,11 @@ body {
   border: none;
   padding: 10px 20px;
   border-radius: 5px;
+}
+
+/* Body styles when side-nav is open */
+body.side-nav-open {
+  overflow: hidden; /* Prevent scrolling when the side nav is open */
 }
 
 /* ############################### Footer ############################### */
@@ -249,7 +256,7 @@ body {
   padding: 20px 16px;
   top: 0;
   left: -100%;
-  width: 75%;
+  width: 90%;
   height: 100%;
   background: #fff;
   transition: left 0.3s ease;
@@ -289,9 +296,25 @@ body {
   color: var(--dark23);
 }
 /* Body styles when side-nav is open */
+.side-nav.open {
+  left: 0; /* Show the sidebar */
+  box-shadow: 4px 0px 15px rgba(0, 0, 0, 0.6); /* Add shadow */
+}
+
 body.side-nav-open {
   overflow: hidden; /* Prevent scrolling when the side nav is open */
 }
+body.side-nav-open::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+  z-index: 998;
+}
+
 /* ############################### Responsive ############################### */
 
 @media (1440px <=width <=1600px) {
