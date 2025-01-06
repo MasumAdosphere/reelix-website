@@ -44,6 +44,7 @@ body {
   --mb16: 16px;
   --mb8: 8px;
 }
+/* top section */
 .top-section{
     padding: var(--py100);
     background-color: var(--bgcolor);
@@ -53,6 +54,7 @@ body {
 }
 .partner-logo{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
 }
@@ -72,6 +74,7 @@ body {
     margin-bottom: 16px;
     font-weight: 600;
     margin-bottom: 16px;
+    text-transform: uppercase;
 }
 .top-section .top-section-content p{
     font-size: 20px;
@@ -94,14 +97,14 @@ body {
     width: 116px;
 }
 .top-section .top-section-content h6{
-    font-size: 18px;
+    font-size: 32px;
     font-weight: 600;
     color: var(--dark23);
     margin-bottom: 12px;
 }
-
+/* top info */
 .top-info{
-    padding: var(--py100);
+    padding-bottom: 100px;
     background-color: var(--bgcolor);
 }
 .top-info .main-content{
@@ -139,8 +142,12 @@ body {
     color: var(--pink); 
     font-weight: 700;
 }
+/* influence-clients */
 .influence-clients{
-    padding: var(--py100);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 100px;
     background-color: var(--bgcolor);
 }
 .influence-clients-content{
@@ -169,12 +176,16 @@ body {
     align-items: center;
     height: 100%;
 }
+/* mid-section */
 .mid-section{
-    padding: var(--py100);
-    background-color: var(--bgcolor);
+    padding: var(--py80);
+    background-color: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.mid-section video{
+border-radius: 20px;
 }
 .mid-section .mid-section-content{
     height: 100%;
@@ -210,7 +221,7 @@ body {
     margin-bottom: 40px;
     width: 116px;
 }
-
+/* roi */
 .roi{
     padding: var(--py100);
     background-color: var(--bgcolor);
@@ -272,8 +283,13 @@ body {
     font-family: var(--font-raleway);
     margin-bottom: 24px;
 }
+.roi-card video{
+    border-radius: 20px;
+}
+/* influence-work */
 .influence-work{
-    padding: var(--py100);
+    padding-top: 0;
+    padding-bottom: 100px;
     background-color: var(--bgcolor);
     display: flex;
     justify-content: center;
@@ -285,6 +301,18 @@ body {
     align-items: center;
     margin-bottom: 32px;
 }
+.influence-work-content button{
+    background-color: var(--pink);
+    padding: 12px 28px;
+    border: none;
+    font-family: var(--font-oswald);
+    border-radius: 64px;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--dark23);
+    margin-bottom: 40px;
+    width: 121px;
+}
 .influence-work-content h3{
     text-transform: uppercase;
     font-size: var(--font48);
@@ -295,18 +323,7 @@ body {
 .influence-work-content h3 span{
     color: var(--pink);
 }
-.influence-work-content button {
-    background-color: var(--pink);
-    padding: 12px 28px;
-    border: none;
-    font-family: var(--font-oswald);
-    border-radius: 64px;
-    font-size: 18px;
-    font-weight: 600;
-    color: var(--dark23);
-    margin-bottom: 40px;
-    width: 116px;
-}
+/* case study */
 .case-study-content h4{
     font-family: var(--font-raleway);
     font-weight: 600;
@@ -352,6 +369,10 @@ body {
     font-size: 28px;
     margin-bottom: 0px;
 }
+.case-study-video video{
+    border-radius: 12px;
+}
+/* influence-work-content */
 .influence-work-content h3{
     text-transform: uppercase;
     font-size: var(--font48);
@@ -359,8 +380,10 @@ body {
     font-weight: 500;
     color: var(--dark23);
 }
+/* influence-banner */
 .influence-banner{
-    padding: var(--py100);
+    padding-top: 0;
+    padding-bottom: 100px;
     background-color: var(--bgcolor);
     width: 100%;
 }
@@ -392,7 +415,7 @@ body {
     font-size: 18px;
     font-weight: 600;
     color: var(--dark23);
-    margin-bottom: 40px;
+    margin-bottom: 0px;
     width: 116px;
 }
 .influence-banner-content .left-bg{
@@ -405,3 +428,170 @@ body {
     right: 0;
     bottom:  0;
 }
+.influence-banner .container, .influence-banner-content {
+    overflow: hidden;
+}
+
+@media (768px <=width <=1023px){
+
+}
+@media (320px <=width <=500px){
+    .top-section{
+        padding: 24px 0;
+    }
+    .top-section .top-section-content h1 br{
+        display: none;
+    }
+    .top-section .top-section-content h1{
+        font-size: 42px;
+        margin-bottom: 16px;
+    }
+    .top-section .top-section-content p br{
+        display: none;
+    }
+    .top-section .top-section-content p{
+        font-size: 18px;
+        margin-bottom: 32px;
+    }
+    .top-section .top-section-content button{
+        margin-bottom: 24px;
+    }
+    .top-section .top-section-content h6{
+        margin-bottom: 28px;
+    }
+    .partner-logo{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: start;
+    }
+    .partner-logo img{
+        margin-right: 20px;
+    }
+    .partner-logo img :nth-child(3){
+        margin-right: 0;
+    }
+    .partner-logo img :nth-child(4){
+        margin-bottom: 0;
+    }
+    .partner-logo img :nth-child(5){
+        margin-bottom: 0;
+    }
+    .partner-logo img{
+        margin-bottom: 24px;
+    }
+    /* top-info */
+    .top-info {
+        padding-bottom: 32px;
+    }
+    .top-info .secondary-content{
+        display: block;
+    }
+    .top-info .main-content p br{
+        display: none;
+    }
+    .top-info .main-content p{
+        font-size: 32px;
+        margin-bottom: 24px;
+    }
+    .top-info .secondary-content p br{
+        display: none;
+    }
+    .top-info .secondary-content p{
+        font-size: 18px;
+    }
+    /* influence-clients */
+    .influence-clients{
+        padding-bottom: 32px;
+    }
+    .influence-clients .row .col-lg-3{
+        margin: 0;
+    }
+    .influence-clients-content h3{
+        font-size: 32px;
+        margin-bottom: 24px;
+    }
+    .influence-clients-image{
+        padding: 40px 0;
+    }
+    /* mid-section */
+    .mid-section{
+        padding: 24px;
+    }
+    .mid-section-video {
+        margin-bottom: 48px;
+    }
+    .mid-section .mid-section-content h1 br{
+        display: none;
+    }
+    .mid-section .mid-section-content h1 {
+        font-size: 32px;
+        margin-bottom: 20px;
+    }
+    .mid-section .mid-section-content p{
+        font-size: 16px;
+        margin-bottom: 32px;
+    }
+    .mid-section .mid-section-content button{
+        margin-bottom: 0;
+    }
+    /* roi */
+    .roi{
+        padding: 32px 0;
+    }
+    .roi-card p{
+        margin-bottom: 20px;
+    }
+    .roi .roi-card{
+        margin-bottom: 24px;
+    }
+    .roi .roi-content h1 br{
+        display: none;
+    }
+    .roi .roi-content h1{
+        font-size: 32px;
+        margin-bottom: 16px;
+    }
+    .roi .roi-content p{
+        font-size: 18px;
+        margin-bottom: 32px;
+    }
+    /* influence-work */
+    .influence-work{
+        padding-bottom: 32px;
+    }
+    .influence-work-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-bottom: 32px;
+    }
+    .influence-work-content h3{
+        font-size: 32px;
+        margin-bottom: 16px;
+    }
+    .influence-work-content button{
+        margin-bottom: 0;
+    }
+    .case-study-content h4{
+        font-size: 18px;
+    }
+    .case-study-content p{
+        font-size: 24px;
+    }
+    /* influence-banner */
+    .influence-banner-content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 80px 40px;
+    }
+    .influence-banner-content h3 br{
+        display: none;
+    }
+    .influence-banner-content h3{
+       font-size: 24px; 
+       text-align: center;
+       margin-bottom: 16px;
+    }
+}    
