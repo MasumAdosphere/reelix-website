@@ -29,7 +29,7 @@ function validateContactForm() {
 }
 
 const scriptURL =
-  "https://script.google.com/macros/s/AKfycbxvNOfF3MERwa2jEATkH6GSk-E8grYb21EiNLptZc5dpPuSg0tqkkWAGRGBKLKkCXVS/exec";
+  "https://script.google.com/macros/s/AKfycbxkGjIA-MDtAoLpFeiGj-LyhMKxdnsBBBdrrCS0tBebBV3SJCxtnJ-aTZp7aUuIucLl/exec";
 const form3 = document.getElementById("contact-us-form");
 
 if (form3) {
@@ -43,10 +43,18 @@ if (form3) {
     console.log(form3);
 
     const formData3 = new FormData(form3);
+    const jsonPayload = {};
+    formData3.forEach((value, key) => {
+      jsonPayload[key] = value;
+    });
+
     console.log("formData", formData3);
     fetch(scriptURL, {
       method: "POST",
-      body: formData3
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(jsonPayload)
     })
       .then((response) => {
         hideLoading();
