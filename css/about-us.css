@@ -90,7 +90,7 @@
 }
 /*-----about-buzz-----*/
 .about-buzz{
-    padding-bottom: 50px;
+    padding: 0;
     background-color: #F2F6F8;
     display: flex;
     justify-content: center;
@@ -118,6 +118,9 @@
     /* display: flex;
     justify-content: center;
     align-items: center; */
+}
+.about-conversation{
+    background-color: #fff;
 }
 .about-conversation .about-conversation-content{
     height: 100%;
@@ -155,7 +158,6 @@
     font-size: 18px;
     font-weight: 600;
     color: var(--dark23);
-    margin-bottom: 40px;
     width: 119px;
     border: 1px solid var(--dark23);
 }
@@ -188,6 +190,7 @@
 }
 .about-partners-images{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
 }
@@ -198,4 +201,86 @@
     background-color: #fff;
     border-radius: 8px;
     padding: 18px 48px;
+}
+@media (320px <=width <=500px){
+    /*about-engagement  */
+    .about-engagement{
+       padding: 40px 0;
+       background-color: #fff;
+    }
+    .about-engagement-video video{
+        margin-bottom: 20px;
+    }
+    .about-engagement .about-engagement-content h1 br{
+        display: none;
+    }
+    .about-engagement .about-engagement-content h1{
+        font-size: 42px;
+    }
+    .about-engagement .about-engagement-content p br{
+        display: none;
+    }
+    .about-engagement .about-engagement-content p{
+        font-size: 18px;
+        margin-bottom: 32px;
+    }
+    .about-engagement .about-engagement-content button{
+        margin-bottom: 0;
+    }
+    /* about-buzz */
+    .about-buzz{
+        background-color: #fff;
+    }
+    .about-buzz-content h3{
+        font-size: 32px;
+        margin-bottom: 24px;
+    }
+    .about-conversation{
+        padding-bottom: 0;
+    }
+    .about-conversation .about-conversation-content{
+        padding: 64px 30px;
+    }
+    .about-conversation .about-conversation-content h1 br{
+        display: none;
+    }
+    .about-conversation .about-conversation-content h1{
+        font-size: 32px;
+        margin-bottom: 16px;
+    }
+    .about-conversation .about-conversation-content p br{
+        display: none;
+    }
+    .about-conversation .about-conversation-content p{
+        font-size: 20px;
+    }
+    .about-conversation .about-conversation-content button{
+        margin-bottom: 0;
+    }
+    /* .about-partners */
+    .about-partners{
+        background-color: #F2F6F8;
+        padding: 64px 0;
+    }
+    .about-partners-content h3{
+        font-size: 32px;
+    }
+    .about-partners-logos{
+        padding: 16px 32px;
+    }
+    .about-partners-images{
+        display: flex;
+        justify-content: center;
+        gap: 16px;
+    }
+    .about-partners-logos{
+        width: 188px;
+        height: 68px;
+        padding: 0;
+    }
+    .about-partners-logos img{
+        max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    }
 }
