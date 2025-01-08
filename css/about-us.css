@@ -46,6 +46,67 @@
     --mb16: 16px;
     --mb8: 8px;
   }
+
+  .page-heading {
+    background-color: #f2f6f8;
+    padding: var(--py100);
+    position: relative;
+    z-index: 10;
+  }
+  .page-heading .page-info h1 {
+    text-align: center;
+    font-family: var(--font-oswald);
+    font-size: var(--font48);
+    font-weight: 500;
+    line-height: 71.14px;
+    margin-bottom: 32px;
+    color: var(--dark23);
+    text-transform: uppercase;
+  }
+  .page-heading .page-info a {
+    font-family: var(--font-raleway);
+    font-size: var(--font20);
+    font-weight: 500;
+    line-height: 28px;
+    text-decoration: none;
+    color: #232323;
+    text-transform: uppercase;
+  }
+  .page-heading .page-info p {
+    font-family: var(--font-raleway);
+    font-size: var(--font20);
+    font-weight: 500;
+    line-height: 28px;
+    color: var(--pink);
+    text-transform: uppercase;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }
+  .page-heading .page-info p img {
+    padding: 0px 12px;
+  }
+  .blog-line-art::before {
+    font-family: var(--font-oswald);
+    content: "about";
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 128px;
+    text-align: center;
+    line-height: 189.7px;
+    text-transform: uppercase;
+    color: #f2f6f8;
+    z-index: -2;
+    font-weight: 500;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 86px;
+    -webkit-text-stroke: 1px #dddddd;
+  }
+
 /*-----about-engagement-----*/
   .about-engagement{
     padding-top: 100px;
@@ -202,11 +263,78 @@
     border-radius: 8px;
     padding: 18px 48px;
 }
+@media (768px <=width <=1023px){
+.about-engagement{
+    padding-top: 64px;
+}
+.about-engagement .about-engagement-content h1  br{
+    display: none;
+}
+.about-engagement .about-engagement-content h1 {
+    font-size: 32px;
+}
+.about-engagement .about-engagement-content p br{
+    display: none;
+}
+.about-engagement .about-engagement-content p{
+    font-size: 16px;
+}
+.about-buzz-content h3 br{
+    display: none;
+}
+.about-buzz-content h3{
+    font-size: 32px;
+}
+.about-conversation{
+    background-color: #F2F6F8;
+}
+.about-conversation .about-conversation-content{
+    padding:80px 40px;
+}
+.about-conversation .about-conversation-content h1 br{
+display: none;
+}
+.about-conversation .about-conversation-content h1{
+    font-size: 32px;
+}
+.about-conversation .about-conversation-content p{
+    font-size: 16px;
+}
+.about-partners{
+   padding-top: 0;
+   padding-bottom: 50px;
+}
+.about-partners-images{
+    justify-content: flex-start;
+    gap: 24px;
+}
+.about-partners-content h3{
+    font-size: 32px;
+    margin-bottom: 0;
+}
+.about-partners-content{
+    margin-bottom: 16px;
+}
+}
 @media (320px <=width <=500px){
+    .page-heading{
+        padding: 40px 0;
+    }
+    .page-heading .page-info h1{
+        font-size: 40px;
+    }
+    .page-heading .page-info a{
+        font-size: 18px;
+    }
+    .page-heading .page-info p{
+        margin: 0;
+    }
+    .blog-line-art::before{
+        margin-top: 16px;
+    }
     /*about-engagement  */
     .about-engagement{
-       padding: 40px 0;
-       background-color: #fff;
+       padding: 0;
     }
     .about-engagement-video video{
         margin-bottom: 20px;
@@ -228,9 +356,6 @@
         margin-bottom: 0;
     }
     /* about-buzz */
-    .about-buzz{
-        background-color: #fff;
-    }
     .about-buzz-content h3{
         font-size: 32px;
         margin-bottom: 24px;

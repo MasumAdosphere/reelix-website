@@ -47,9 +47,70 @@
     --mb8: 8px;
   }
 
+  .page-heading {
+    background-color: #f2f6f8;
+    padding: var(--py100);
+    position: relative;
+    z-index: 10;
+  }
+  .page-heading .page-info h1 {
+    text-align: center;
+    font-family: var(--font-oswald);
+    font-size: var(--font48);
+    font-weight: 500;
+    line-height: 71.14px;
+    margin-bottom: 32px;
+    color: var(--dark23);
+    text-transform: uppercase;
+  }
+  .page-heading .page-info a {
+    font-family: var(--font-raleway);
+    font-size: var(--font20);
+    font-weight: 500;
+    line-height: 28px;
+    text-decoration: none;
+    color: #232323;
+    text-transform: uppercase;
+  }
+  .page-heading .page-info p {
+    font-family: var(--font-raleway);
+    font-size: var(--font20);
+    font-weight: 500;
+    line-height: 28px;
+    color: var(--pink);
+    text-transform: uppercase;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }
+  .page-heading .page-info p img {
+    padding: 0px 12px;
+  }
+  .blog-line-art::before {
+    font-family: var(--font-oswald);
+    content: "case study";
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 128px;
+    text-align: center;
+    line-height: 189.7px;
+    text-transform: uppercase;
+    color: #f2f6f8;
+    z-index: -2;
+    font-weight: 500;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 86px;
+    -webkit-text-stroke: 1px #dddddd;
+  }
+
+
   .client{
     padding: var(--py100);
-    background-color: var(--bgcolor);
+    background-color: #f2f6f8;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -102,12 +163,13 @@
     display: flex;
     width: 80%;
     border-radius: 8px;
+    background-color: #fff;
     justify-content: space-between;
 }
 .case-study-video-insights-details h3{
     font-family: var(--font-raleway);
     font-weight: 600;
-    color: #E5E5E6;
+    color: var(--pink);
     font-size: 16px;
     margin-bottom: 0px;
     text-transform: uppercase;
@@ -115,7 +177,7 @@
 .case-study-video-insights-details h4{
     font-family: var(--font-oswald);
     font-weight: 600;
-    color: #fff;
+    color: var(--dark23);
     font-size: 28px;
     margin-bottom: 0px;
     text-transform: uppercase;
@@ -130,17 +192,19 @@
     color: var(--dark23);
 }
 .influence-banner{
-    padding: var(--py100);
+    padding-top: 0;
+    padding-bottom: 100px;
     background-color: var(--bgcolor);
     width: 100%;
 }
 .influence-banner-content{
+    background-color: var(--dark23);
     display: flex;
+    align-items: center;
     justify-content: space-between;
     padding: 86px 140px;
     position: relative;
     border-radius: 12px;
-    background-color: var(--dark23);
 }
 .influence-banner-content h3{
     font-family: var(--font-oswald);
@@ -162,7 +226,7 @@
     font-size: 18px;
     font-weight: 600;
     color: var(--dark23);
-    margin-bottom: 40px;
+    margin-bottom: 0px;
     width: 116px;
 }
 .influence-banner-content .left-bg{
@@ -175,9 +239,71 @@
     right: 0;
     bottom:  0;
 }
-@media (320px <=width <=500px){
+.influence-banner .container, .influence-banner-content {
+    overflow: hidden;
+}
+    
+@media (768px <=width <=1023px){
     .client{
+        padding: 64px 0;
+    }
+    .case-study-content p{
+        font-size: 22px;
+    }
+    .case-study-video-insights-details h3{
+        font-size: 7px;
+    }
+    .case-study-video-insights-details h4{
+        font-size: 16px;
+    }
+    .case-study-video-insights{
+        padding: 6px 10px;
+    }
+    .influencer-card{
+        display: flex;
+        gap: 32px 0px;
+    }
+    .influence-banner-content{
+        padding: 56px 110px;
+        display: flex;
+        flex-direction: column;
+    }
+    .influence-banner-content h3{
+        font-size: 24px;
+        margin-bottom: 16px;
+        text-align: center;
+    }
+    .influence-banner-content h3 br{
+        display: none;
+    }
+    .influence-banner-content .left-bg{
+        left: -93px;
+    }
+    .influence-banner-content .right-bg{
+        right: -70px;
+        top: 40px;
+    }
+}
+@media (320px <=width <=500px){
+    .page-heading{
         padding: 40px 0;
+    }
+    .page-heading .page-info h1{
+        font-size: 40px;
+    }
+    .page-heading .page-info a{
+        font-size: 18px;
+    }
+    .page-heading .page-info p{
+        margin: 0;
+    }
+    .blog-line-art::before{
+        margin-top: 16px;
+        font-size: 86px;
+    }
+
+    .client{
+        padding: 0;
     }
         /* influence-work */
         .influence-work{
@@ -220,5 +346,6 @@
            font-size: 24px; 
            text-align: center;
            margin-bottom: 16px;
+           line-height: 35px;
         }
 }

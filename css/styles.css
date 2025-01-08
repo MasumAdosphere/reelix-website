@@ -365,8 +365,7 @@ body.side-nav-open::before {
 @media (480px <=width <=567px) {
 }
 
-@media (320px <=width <=479px) {
-}
+
 @media screen and (max-width: 991px) {
   .navbar .nav-link {
     padding-left: 0 !important;
@@ -386,4 +385,25 @@ body.side-nav-open::before {
   .side-nav {
     display: none;
   }
+}
+@media (768px <=width <=1023px){
+  .footer-section{
+    padding: 36px 0;
+  }
+.footer-section .footer-info br{
+display: none;
+}
+.footer-section .footer-info{
+  font-size: 16px;
+}
+}
+
+@media (320px <=width <=479px) {
+/* footer */
+.footer-section{
+  padding: 64px 0;
+}
+.footer-section .footer-info br{
+  display: none;
+}
 }
