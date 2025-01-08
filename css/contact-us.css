@@ -1,0 +1,174 @@
+
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+  }
+  
+  body {
+    padding: 0;
+    margin: 0;
+  }
+/* ############################### Contact Us ############################### */
+.page-heading {
+    background-color: #f2f6f8;
+    padding: var(--py100);
+    position: relative;
+    z-index: 10;
+  }
+  .page-heading .page-info h1 {
+    text-align: center;
+    font-family: var(--font-oswald);
+    font-size: var(--font48);
+    font-weight: 500;
+    line-height: 71.14px;
+    margin-bottom: 32px;
+    color: var(--dark23);
+    text-transform: uppercase;
+  }
+  .page-heading .page-info a {
+    font-family: var(--font-raleway);
+    font-size: var(--font20);
+    font-weight: 500;
+    line-height: 28px;
+    text-decoration: none;
+    color: #232323;
+    text-transform: uppercase;
+  }
+  .page-heading .page-info p {
+    font-family: var(--font-raleway);
+    font-size: var(--font20);
+    font-weight: 500;
+    line-height: 28px;
+    color: var(--pink);
+    text-transform: uppercase;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }
+  .page-heading .page-info p img {
+    padding: 0px 12px;
+  }
+  .blog-line-art::before {
+    font-family: var(--font-oswald);
+    content: "Contact Us";
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 128px;
+    text-align: center;
+    line-height: 189.7px;
+    text-transform: uppercase;
+    color: #f2f6f8;
+    z-index: -2;
+    font-weight: 500;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 86px;
+    -webkit-text-stroke: 1px #dddddd;
+  }
+  .get-in-touch {
+    padding-bottom: 100px;
+    background-color: #f2f6f8;
+  }
+  .get-in-touch-text-header h2 {
+    font-family: var(--font-oswald);
+    font-size: var(--font48);
+    font-weight: 500;
+    line-height: 71.14px;
+    text-align: left;
+    text-transform: uppercase;
+    padding-bottom: 16px;
+    margin: 0;
+  }
+  .get-in-touch-text-header p {
+    font-family: var(--font-raleway);
+    font-size: var(--font20);
+    font-weight: 700;
+    line-height: 28px;
+    text-align: left;
+  }
+  .get-in-touch-text-body .adderss,
+  .get-in-touch-text-body .email,
+  .get-in-touch-text-body .phone {
+    display: flex;
+    padding-bottom: 24px;
+  }
+  .get-in-touch-text-body .adderss h4,
+  .get-in-touch-text-body .email h4,
+  .get-in-touch-text-body .phone h4 {
+    font-family: var(--font-oswald);
+    font-size: var(--font28);
+    font-weight: 500;
+    line-height: 41.5px;
+    text-align: left;
+    text-transform: uppercase;
+    color: var(--dark23);
+  }
+  .get-in-touch-text-body .adderss h6,
+  .get-in-touch-text-body .email h6,
+  .get-in-touch-text-body .phone h6 {
+    font-family: var(--font-raleway);
+    font-size: var(--font18);
+    font-weight: 600;
+    line-height: 28px;
+    text-align: left;
+    color: #292e32;
+  }
+  .get-in-touch-text-body .adderss .adderss-text,
+  .get-in-touch-text-body .email .email-text,
+  .get-in-touch-text-body .phone .phone-text {
+    padding-left: 16px;
+  }
+  .get-in-touch-text-header span {
+    color: var(--pink);
+  }
+  .get-in-touch-card {
+    background-color: var(--white);
+    border-radius: 20px;
+    padding: 32px;
+  }
+  .get-in-touch-card .form-items {
+    width: 100%;
+    padding-bottom: 16px;
+  }
+  .get-in-touch-card .form-items label {
+    display: block;
+    font-family: var(--font-oswald);
+    font-size: var(--font20);
+    font-weight: 500;
+    line-height: 29.64px;
+    text-transform: uppercase;
+    text-align: left;
+    padding-bottom: 8px;
+    text-decoration-skip-ink: none;
+    color: var(--dark23);
+  }
+  .get-in-touch-card .form-items input,
+  textarea {
+    font-family: var(--font-raleway);
+    padding: 16px;
+    width: 100%;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16.44px;
+    text-align: left;
+    color: #292e32;
+    border: 1px solid #c6c6c6;
+    border-radius: 5px;
+  }
+  .get-in-touch-card button {
+    background-color: var(--pink);
+    font-family: var(--font-oswald);
+    font-size: var(--font18);
+    font-weight: 600;
+    line-height: 26.68px;
+    text-align: center;
+    padding: 12px 28px;
+    border-radius: 63px;
+    outline: none;
+  }
