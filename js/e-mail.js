@@ -40,7 +40,6 @@ if (form3) {
     }
     // Display loading effect
     showLoading();
-    console.log(form3);
 
     const formData3 = new FormData(form3);
     const jsonPayload = {};
@@ -48,7 +47,6 @@ if (form3) {
       jsonPayload[key] = value;
     });
 
-    console.log("formData", formData3);
     fetch(scriptURL, {
       method: "POST",
       headers: {
@@ -58,7 +56,7 @@ if (form3) {
     })
       .then((response) => {
         hideLoading();
-        console.log("ress", response);
+
         alert("Thank you! Your form is submitted successfully.");
         form3.reset();
       })
