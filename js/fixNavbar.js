@@ -14,6 +14,8 @@ window.addEventListener("scroll", function () {
     navbar.classList.remove("fixed-top");
   }
 });
+
+// Hamburger Menu
 document.addEventListener("DOMContentLoaded", function () {
   setTimeout(() => {
     const hamburger = document.getElementById("hamburger"); // Hamburger in navbar
@@ -36,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Function to toggle the sidebar open/close
     function toggleSidebar() {
-      hamburger.classList.toggle("active"); // Toggle hamburger icon (navbar)
+      // hamburger.classList.toggle("active"); // Toggle hamburger icon (navbar)
       if (sideHamburger) {
         sideHamburger.classList.toggle("active"); // Toggle the hamburger inside the sidebar
       }
