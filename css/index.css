@@ -6,6 +6,24 @@
   padding: 0;
   margin: 0;
 }
+*:focus {
+    outline: 0 !important;
+}
+.btn:focus{
+    outline: none;
+    box-shadow: none;
+}
+.btn:focus{
+    outline: none;
+    box-shadow: none;
+}
+button:focus {
+    outline: none;
+  }
+input[type=button] {
+    outline: none !important;
+    box-shadow: none !important;
+}
 
 body {
   padding: 0;
@@ -84,6 +102,9 @@ body {
     font-family: var(--font-raleway);
     margin-bottom: 32px;
 }
+.top-section-content a{
+    text-decoration: none;
+}
 .top-section .top-section-content button {
     background-color: var(--pink);
     display: flex;
@@ -99,10 +120,11 @@ body {
     margin-bottom: 40px;
     width: 116px;
 }
-.top-section .top-section-content h6{
-    font-size: 32px;
+ .top-section-content h6{
+    font-size: 18px;
     font-weight: 600;
     color: var(--dark23);
+    font-family: var(--font-oswald);
     margin-bottom: 12px;
 }
 /* top info */
@@ -120,12 +142,12 @@ body {
    justify-content: center;
 }
 .top-info .main-content p {
-    text-transform: uppercase;
-    font-size: var(--font48);
+    font-size: 32px;
     font-family: var(--font-oswald);
     font-weight: 500;
     color: var(--light-blue);
     color: var(--dark23);
+    text-transform: uppercase;
 }
 .top-info .main-content p  span{
     color: var(--pink);
@@ -138,9 +160,10 @@ body {
 
 }
 .top-info .secondary-content p{
-    font-size: 22px;
+    font-size: 20px;
     font-weight: 600;
     color: var(--light-blue);
+    margin-bottom: 0;
     font-family: var(--font-raleway);
 }
 
@@ -223,7 +246,6 @@ border-radius: 20px;
     font-size: 18px;
     font-weight: 600;
     color: var(--dark23);
-    margin-bottom: 40px;
     width: 116px;
 }
 /* roi */
@@ -242,6 +264,7 @@ border-radius: 20px;
     display: flex;
     flex-direction: column;
    justify-content: center;
+
 }
 .roi .roi-content h1{
     font-family: var(--font-oswald);
@@ -249,6 +272,7 @@ border-radius: 20px;
     font-size: 48px;
     margin-bottom: 16px;
     font-weight: 500;
+    text-transform: uppercase;
     margin-bottom: 16px;
 }
 .roi .roi-content p{
@@ -308,6 +332,9 @@ border-radius: 20px;
     align-items: center;
     margin-bottom: 32px;
 }
+.influence-work-content a{
+    outline: none;
+}
 .influence-work-content button{
     background-color: var(--pink);
     padding: 12px 28px;
@@ -317,7 +344,6 @@ border-radius: 20px;
     font-size: 18px;
     font-weight: 600;
     color: var(--dark23);
-    margin-bottom: 40px;
     width: 121px;
 }
 .influence-work-content h3{
@@ -337,6 +363,7 @@ border-radius: 20px;
     color: var(--pink);
     font-size: 18px;
     margin-bottom: 4px;
+    text-transform: uppercase;
 }
 .case-study-content p{
     font-family: var(--font-oswald);
@@ -344,6 +371,8 @@ border-radius: 20px;
     font-weight: 600;
     font-size: 28px;
     margin-bottom: 16px;
+    text-transform: uppercase;
+
 }
 .case-study-video {
     position: relative;
@@ -782,22 +811,24 @@ border-radius: 20px;
         display: flex;
         flex-wrap: wrap;
         justify-content: start;
+        gap: 20px;
     }
-    .partner-logo img{
-        margin-right: 20px;
+    /* .partner-logo img{
+        margin-right: 24px;
     }
-    .partner-logo img :nth-child(3){
+    .partner-logo img:nth-child(3){
+        margin-bottom: 0;
+    }
+    .partner-logo img:nth-child(4){
+        margin-bottom: 0;
+    }
+    .partner-logo img:nth-child(5){
+        margin-bottom: 0;
         margin-right: 0;
-    }
-    .partner-logo img :nth-child(4){
-        margin-bottom: 0;
-    }
-    .partner-logo img :nth-child(5){
-        margin-bottom: 0;
     }
     .partner-logo img{
         margin-bottom: 24px;
-    }
+    } */
     /* top-info */
     .top-info-tablet{
         display: none;
@@ -854,6 +885,9 @@ border-radius: 20px;
         margin-bottom: 0;
     }
     /* roi */
+    .roi-content{
+
+    }
     .roi-tablet{
         display: none;
     }
@@ -905,6 +939,13 @@ border-radius: 20px;
     }
     .case-study-content p{
         font-size: 24px;
+    }
+    .case-study-video-insights{
+        padding: 8px 12px;
+        width: 95%;
+    }
+    .case-study-video-insights-details h4{
+        font-size: 14px;
     }
     /* influence-banner */
     .influence-banner{

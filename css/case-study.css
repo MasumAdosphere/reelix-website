@@ -5,6 +5,17 @@
     padding: 0;
     margin: 0;
   }
+  *:focus {
+    outline: 0 !important;
+}
+.btn:focus{
+    outline: none;
+    box-shadow: none;
+}
+input[type=button] {
+    outline: none !important;
+    box-shadow: none !important;
+}
   
   body {
     padding: 0;
@@ -250,11 +261,14 @@
         .influence-work-content h3{
             font-size: 32px;
         }
+        .case-study-video-insights{
+            padding: 8px 12px;
+        }
         .case-study-video-insights-details h3{
-            font-size: 9px;
+            font-size: 14px;
         }
         .case-study-video-insights-details h4{
-            font-size: 18px;
+            font-size: 16px;
         }
         /* influence-banner */
         .influence-banner-content{
@@ -357,17 +371,24 @@
         .influence-work-content button{
             margin-bottom: 0;
         }
+        .case-study-video-insights{
+            width: 95%;
+        }
         .case-study-content h4{
             font-size: 18px;
         }
         .case-study-content p{
             font-size: 24px;
         }
-        .case-study-video-insights-details h3{
-            font-size: 9px;
+        .case-study-video-insights{
+            padding: 8px 12px;
+            width: 95%;
         }
         .case-study-video-insights-details h4{
-            font-size: 18px;
+            font-size: 14px;
+        }
+        .case-study-video-insights-details h3{
+            font-size: 9px;
         }
         /* influence-banner */
         .influence-banner{
