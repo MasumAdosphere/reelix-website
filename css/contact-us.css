@@ -172,9 +172,53 @@
     border-radius: 63px;
     outline: none;
   }
-
-  @media (320px <=width <=500px){
-
+  @media (1024px <=width <=1399px){
+    .get-in-touch-text-header h2{
+      font-size: 32px;
+    }
+    .get-in-touch-text-header p br{
+      display: none;
+    }
+    .get-in-touch-text-header p {
+      font-size: 16px;
+    }
+    .get-in-touch-text-body .adderss h4, .get-in-touch-text-body .email h4, .get-in-touch-text-body .phone h4{
+      font-size: 24px;
+    }
+    .get-in-touch-text-body .adderss h6, .get-in-touch-text-body .email h6, .get-in-touch-text-body .phone h6{
+      font-size: 16px;
+    }
+    .get-in-touch{
+      padding-bottom: 50px;
+    }
+    .get-in-touch-card{
+      padding: 20px;
+    }
+  }
+  @media (768px <=width <=1023px){
+    .get-in-touch-text-header h2{
+      font-size: 32px;
+    }
+    .get-in-touch-text-header p br{
+      display: none;
+    }
+    .get-in-touch-text-header p {
+      font-size: 16px;
+    }
+    .get-in-touch-text-body .adderss h4, .get-in-touch-text-body .email h4, .get-in-touch-text-body .phone h4{
+      font-size: 24px;
+    }
+    .get-in-touch-text-body .adderss h6, .get-in-touch-text-body .email h6, .get-in-touch-text-body .phone h6{
+      font-size: 16px;
+    }
+    .get-in-touch{
+      padding-bottom: 50px;
+    }
+    .get-in-touch-card{
+      padding: 20px;
+    }
+  }
+  @media (320px <=width <767px){
     .page-heading{
       padding: 40px 0;
   }

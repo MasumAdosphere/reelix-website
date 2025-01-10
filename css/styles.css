@@ -398,7 +398,7 @@ display: none;
 }
 }
 
-@media (320px <=width <=479px) {
+@media (320px <=width <=767px) {
 /* footer */
 .footer-section{
   padding: 64px 0;

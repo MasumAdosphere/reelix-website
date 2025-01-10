@@ -149,44 +149,37 @@ body {
     font-weight: 700;
 }
 /* influence-clients */
-.influence-clients{
+.influence-clients {
     display: flex;
     justify-content: center;
     align-items: center;
     padding-bottom: 100px;
     background-color: var(--bgcolor);
-}
-.influence-clients-content{
+  }
+  .influence-clients-content {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-bottom: 32px;
-}
-.influence-clients-content h3{
+  }
+  .influence-clients-content h3 {
     text-transform: uppercase;
     font-size: var(--font48);
     font-family: var(--font-oswald);
     font-weight: 500;
     color: var(--dark23);
-}
-.influence-clients-content h3 span{
+    margin-bottom: 0;
+  }
+  .influence-clients-content h3 span {
     color: var(--pink);
-}
-.influence-clients-image{
-    width: 100%; /* Ensures the div takes up the full width of the column */
-    height: 160px; /* Set a fixed height for consistency */
+  }
+  .influence-clients-image {
+    width: 100%;
+    border-radius: 16px;
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden; 
-    background-color: white;
-    border-radius: 8px;
-}
-.influence-clients-image img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain; /* Ensure the image fits within the div without distortion */
-}
+  }
     
 /* mid-section */
 .mid-section{
@@ -275,7 +268,6 @@ border-radius: 20px;
     font-size: 18px;
     font-weight: 600;
     color: var(--dark23);
-    margin-bottom: 40px;
     width: 116px;
 }
 .roi-card{
@@ -366,7 +358,7 @@ border-radius: 20px;
     background-color: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(50px);
     display: flex;
-    width: 80%;
+    width: 90%;
     border-radius: 8px;
     background-color: #fff;
     justify-content: space-between;
@@ -454,7 +446,82 @@ border-radius: 20px;
 .influence-banner .container, .influence-banner-content {
     overflow: hidden;
 }
-
+@media (1024px <=width <=1399px){
+    .top-section .top-section-content h1{
+        font-size: 32px;
+    }
+    .top-section .top-section-content p{
+        font-size: 16px;
+    }
+    .top-section .top-section-content h1 br{
+        display: none;
+    }
+    .top-section .top-section-content p br{
+        display: none;
+    }
+    .top-section .top-section-content h6{
+        font-size: 24px;
+    }
+    .partner-logo{
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        gap: 24px;
+    }
+    /* top info */
+    .top-info .main-content p br{
+        display: none;
+    }
+    .top-info .secondary-content p  br{
+        display: none;
+    }
+    .top-info .main-content p{
+        font-size: 32px;
+    }
+    .top-info .secondary-content p{
+        font-size: 16px;
+    }
+    /* roi */
+    .roi-card h3{
+        font-size: 24px;
+    }
+    .roi .roi-content h1{
+        font-size: 32px;
+    }
+    .roi .roi-content p{
+        font-size: 16px;
+    }
+    /* influencer work */
+    .influence-work-content h3{
+        font-size: 32px;
+    }
+    .case-study-video-insights-details h3{
+        font-size: 9px;
+    }
+    .case-study-video-insights-details h4{
+        font-size: 18px;
+    }
+    /* influence-banner */
+    .influence-banner-content{
+        padding: 56px 110px;
+        display: flex;
+        flex-direction: column;
+    }
+    .influence-banner-content h3{
+        font-size: 32px;
+        margin-bottom: 16px;
+        text-align: center;
+    }
+    .influence-banner-content h3 br{
+        display: none;
+    }
+    .influence-banner-content .left-bg{
+        left: -35px;
+    }
+    .influence-banner-content .right-bg{
+        right: -20px;
+        top: 40px;
+    }
+}
 @media (768px <=width <=1023px){
     /* top-section  */
     .top-section{
@@ -526,17 +593,17 @@ border-radius: 20px;
         font-weight: 700;
     }
     /* influence-clients */
-    .influence-clients{
-        padding-top: 56px;
-        padding-bottom: 72px;
-    }
-    .influence-clients-content h3{
+    .influence-clients .influence-clients-image {
+        border-radius: 8px;
+      }
+    
+      .influence-clients-content {
+        margin-bottom: 24px;
+      }
+      .influence-clients-content h3 {
         font-size: 28px;
-    }
-    .custom-col{
-        height: 85px;
-        width: 164px;
-    }
+        margin-bottom: 0;
+      }
     /* mid section */
     .mid-section{
         padding: 50px;
@@ -687,7 +754,7 @@ border-radius: 20px;
     }
 
 }
-@media (320px <=width <=500px){
+@media (320px <=width <=767px){
     .top-section{
         padding: 24px 0;
     }
@@ -755,19 +822,16 @@ border-radius: 20px;
         font-size: 18px;
     }
     /* influence-clients */
-    .influence-clients{
+    .influence-clients {
         padding-bottom: 32px;
-    }
-    .influence-clients .row .col-lg-3{
-        margin: 0;
-    }
-    .influence-clients-content h3{
-        font-size: 32px;
-        margin-bottom: 24px;
-    }
-    .influence-clients-image{
-        height: 85px;
-    }
+      }
+      .influence-clients .influence-clients-image {
+        border-radius: 8px;
+      }
+    
+      .influence-clients-content h3 {
+        font-size: var(--font32);
+      }
     /* mid-section */
     .mid-section{
         padding: 24px;
@@ -823,6 +887,12 @@ border-radius: 20px;
         justify-content: center;
         margin-bottom: 32px;
     }
+    .case-study-video-insights-details h3{
+        font-size: 9px;
+    }
+    .case-study-video-insights-details h4{
+        font-size: 18px;
+    }
     .influence-work-content h3{
         font-size: 32px;
         margin-bottom: 16px;
@@ -837,6 +907,9 @@ border-radius: 20px;
         font-size: 24px;
     }
     /* influence-banner */
+    .influence-banner{
+        padding-bottom: 32px;
+    }
     .influence-banner-content{
         display: flex;
         flex-direction: column;
@@ -852,5 +925,12 @@ border-radius: 20px;
        text-align: center;
        margin-bottom: 16px;
        line-height: 35px;
+    }
+    .influence-banner-content .left-bg{
+        left: -93px;
+    }
+    .influence-banner-content .right-bg{
+        right: -70px;
+        top: 150px;
     }
 }    

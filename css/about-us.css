@@ -181,7 +181,7 @@
     align-items: center; */
 }
 .about-conversation{
-    background-color: #fff;
+    background-color: #f2f6f8;
 }
 .about-conversation .about-conversation-content{
     height: 100%;
@@ -263,6 +263,39 @@
     border-radius: 8px;
     padding: 18px 48px;
 }
+@media (1024px <=width <=1399px){
+    .about-engagement .about-engagement-content h1{
+        font-size: 32px;
+    }
+    .about-engagement .about-engagement-content p{
+        font-size: 16px;
+    }
+    .about-buzz-content h3{
+        font-size: 32px;
+    }
+    .about-conversation .about-conversation-content h1{
+        font-size: 32px;
+    }
+    .about-conversation .about-conversation-content h1 br{
+        display: none;
+    }
+    .about-conversation .about-conversation-content{
+        padding: 0 60px;
+    }
+    .about-conversation .about-conversation-content p br{
+        display: none;
+    }
+    .about-conversation .about-conversation-content p{
+        font-size: 16px;
+    }
+    .about-partners-content h3{
+        font-size: 32px;
+    }
+    .about-partners-images{
+        justify-content: center;
+        gap: 24px;
+    }
+}
 @media (768px <=width <=1023px){
 .about-engagement{
     padding-top: 64px;
@@ -316,7 +349,7 @@ display: none;
     margin-bottom: 16px;
 }
 }
-@media (320px <=width <=500px){
+@media (320px <=width <=767px){
     .page-heading{
         padding: 40px 0;
     }
@@ -334,7 +367,7 @@ display: none;
     }
     /*about-engagement  */
     .about-engagement{
-       padding: 0;
+       padding-bottom: 32px;
     }
     .about-engagement-video video{
         margin-bottom: 20px;
@@ -356,6 +389,12 @@ display: none;
         margin-bottom: 0;
     }
     /* about-buzz css */
+    .about-buzz-content{
+        justify-content: flex-start;
+    }
+    .about-buzz-content h3 br{
+        display: none;
+    }
     .about-buzz-content h3{
         font-size: 32px;
         margin-bottom: 24px;
