@@ -134,17 +134,14 @@
                 <div class="form-items">
                   <label for="">Phone Number</label>
                   <input
-                    type="tel"
-                    autocomplete="off"
-                    name="phone"
-                    data-bs-toggle="tooltip"
-                    data-bs-placement="bottom"
-                    class="international-number"
-                    title="Enter Your Phone Number"
-                    placeholder="Enter your phone number"
-                    required
-                    id="phone"
-                  />
+                  autocomplete="tel"
+                  type="tel"
+                  name="Number"
+                  class="international-number"
+                  title="Please enter valid phone number"
+                  placeholder="Number"
+                  required
+                  id="phone" />
                   <div>
                     <span
                       id="valid-msg"
@@ -207,8 +204,8 @@
 
     <!-- <script src="js/e-mail.js"></script> -->
     <script src="js/phoneNumberValidation.js"></script>
-
     <script src="js/fixNavbar.js"></script>
+    
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
       integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
@@ -216,94 +213,115 @@
       referrerpolicy="no-referrer"
     ></script>
     <script>
-      document
-        .getElementById("contact-us-form")
-        .addEventListener("submit", async (e) => {
-          e.preventDefault(); // Prevent the default form submission
+      function validateContactForm() {
+        const name = document.querySelector('input[name="name"]').value.trim();
+        const email = document.querySelector('input[name="email"]').value.trim();
+        const number = document.querySelector('input[name="Number"]').value.trim();
+        var errorName = document.getElementById("errorName");
+        var errorEmail = document.getElementById("errorEmail");
+        var phoneError = document.getElementById("error-msg");
+      
+        const namePattern = /^[A-Za-z -]+$/;
+        if (name === "" || !namePattern.test(name)) {
+          errorName.innerHTML = "Invalid Name";
+          return false;
+        } else {
+          errorName.innerHTML = "";
+        }
+        if (email === "") {
+          errorEmail.innerHTML = "Enter email properly";
+          return false;
+        } else {
+          errorEmail.innerHTML = "";
+        }
+        if (number === "" || phoneError.innerHTML !== "") {
+          phoneError.innerHTML = "Enter valid phone number";
+          return false;
+        } else {
+          phoneError.innerHTML = "";
+        }
+        return true;
+      }
+      document.getElementById('phone').addEventListener('input', function (e) {
+        this.value = this.value.replace(/[^0-9]/g, '');
+      });
+  
+      document.getElementById("contact-us-form").addEventListener("submit", async (e) => {
+        e.preventDefault();
+        if (!validateContactForm()) {
+          return;
+        }
+  
+        const input = document.querySelector('#phone')
+        // const button = document.querySelector('#btn')
+        const errorMsg = document.querySelector('#error-msg')
+        const validMsg = document.querySelector('#valid-msg')
 
-          // Phone validation check
-          const phoneInput = document.querySelector("#phone");
-          const errorMsg = document.querySelector("#error-msg");
-          const validMsg = document.querySelector("#valid-msg");
-          const errorMap = [
-            "Invalid number",
-            "Invalid country code",
-            "Too short",
-            "Too long",
-            "Invalid number"
-          ];
-          const iti = window.intlTelInput(phoneInput, {
-            initialCountry: "in",
-            utilsScript:
-              "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/19.2.16/js/utils.js"
+        // here, the index maps to the error code returned from getValidationError - see readme
+        const errorMap = ['Invalid number', 'Invalid country code', 'Too short', 'Too long', 'Invalid number']
+
+        // initialise plugin
+        const iti = window.intlTelInput(input, {
+            initialCountry: 'in',
+            utilsScript: 'https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/19.2.16/js/utils.js'
+        })
+
+        const reset = () => {
+            input.classList.remove('error')
+            errorMsg.innerHTML = ''
+            errorMsg.classList.add('hide')
+            validMsg.classList.add('hide')
+        }
+
+        // on click button: validate
+        input.addEventListener('change', () => {
+            reset()
+            if (!input.value.trim()) {
+              showError("Required");
+            } else if (iti.isValidNumberPrecise()) {
+              validMsg.classList.remove("hide");
+            } else {
+              const errorCode = iti.getValidationError();
+              const msg = errorMap[errorCode] || "Invalid number";
+              showError(msg);
+            }
+        })
+
+       
+  
+        document.getElementById("loadingElementId").style.display = "block";
+  
+        const formData = {
+          name: document.querySelector('input[name="name"]').value,
+          email: document.querySelector('input[name="email"]').value,
+          phone: input.value,
+          message: document.querySelector('textarea[name="message"]').value
+        };
+  
+        const scriptURL = "https://script.google.com/macros/s/AKfycbxeIrbnWIpuECKgwIJzId4qlL5pHxIQe_pUxCddhyb6BtyxmTEh3AfnpRI396Wb7H4p/exec"; // Replace with your Web App URL
+      
+        try {
+          await fetch(scriptURL, {
+            method: "POST",
+            mode: "no-cors",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(formData)
           });
-
-          const resetPhoneValidation = () => {
-            phoneInput.classList.remove("error");
-            errorMsg.innerHTML = "";
-            errorMsg.classList.add("hide");
-            validMsg.classList.add("hide");
-          };
-
-          resetPhoneValidation(); // Reset phone validation before checking
-
-          if (!phoneInput.value.trim() || !iti.isValidNumber()) {
-            const errorCode = iti.getValidationError();
-            errorMsg.innerHTML = errorMap[errorCode] || "Invalid number";
-            errorMsg.classList.remove("hide");
-            phoneInput.classList.add("error");
-            phoneInput.focus(); // Set focus to the phone input field
-            return; // Stop form submission if phone number is invalid
-          }
-
-          const phoneNumber = iti.getNumber(); // Get the formatted phone number
-          if (phoneNumber.length < 10 || phoneNumber.length > 15) {
-            errorMsg.innerHTML =
-              "Phone number must be between 10 and 15 digits.";
-            errorMsg.classList.remove("hide");
-            phoneInput.classList.add("error");
-            phoneInput.focus(); // Set focus to the phone input field
-            return; // Stop form submission if length is invalid
-          }
-
-          // Show the loading spinner
-          document.getElementById("loadingElementId").style.display = "block";
-
-          // Get form data
-          const formData = {
-            name: document.querySelector('input[name="name"]').value,
-            email: document.querySelector('input[name="email"]').value,
-            phone: phoneInput.value,
-            message: document.querySelector('textarea[name="message"]').value
-          };
-
-          // Web App URL from Apps Script
-          const scriptURL =
-            "https://script.google.com/macros/s/AKfycbxeIrbnWIpuECKgwIJzId4qlL5pHxIQe_pUxCddhyb6BtyxmTEh3AfnpRI396Wb7H4p/exec"; // Replace with your Web App URL
-
-          try {
-            // Send the form data to the Apps Script
-            const response = await fetch(scriptURL, {
-              method: "POST",
-              mode: "no-cors",
-              headers: { "Content-Type": "application/json" },
-              body: JSON.stringify(formData)
-            });
-
-            alert("Your message has been sent successfully!");
-
-            document.querySelector('input[name="name"]').value = "";
-            document.querySelector('input[name="email"]').value = "";
-            phoneInput.value = "";
-            document.querySelector('textarea[name="message"]').value = "";
-            resetPhoneValidation();
-          } catch (error) {
-            alert("Error: Unable to send the message. Please try again later.");
-          } finally {
-            // Hide the loading spinner
-            document.getElementById("loadingElementId").style.display = "none";
-          }
-        });
+  
+          alert("Your message has been sent successfully!");
+  
+          document.querySelector('input[name="name"]').value = "";
+          document.querySelector('input[name="email"]').value = "";
+          input.value = "";
+          document.querySelector('textarea[name="message"]').value = "";
+          reset();
+        } catch (error) {
+          console.log(error);
+          alert("Error: Unable to send the message. Please try again later.");
+        } finally {
+          document.getElementById("loadingElementId").style.display = "none";
+        }
+      });
     </script>
 
     <script src="js/include-html.min.js"></script>
@@ -315,6 +333,5 @@
       referrerpolicy="no-referrer"
     ></script> -->
 
-    <!-- Google Tag Manager -->
   </body>
 </html>

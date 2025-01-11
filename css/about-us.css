@@ -200,13 +200,21 @@ input[type=button] {
 .about-conversation{
     background-color: #f2f6f8;
 }
-.about-conversation .about-conversation-content{
+.about-conversation-details{
     height: 100%;
-    padding: 0px 80px;
+    padding: 0px 75px;
     display: flex;
     flex-direction: column;
    justify-content: center;
    background-color: var(--pink);
+}
+.about-conversation .about-conversation-content{
+    /* height: 100%;
+    padding: 0px 40px;
+    display: flex;
+    flex-direction: column;
+   justify-content: center;
+   background-color: var(--pink); */
 }
 .about-conversation .about-conversation-content h1{
     font-family: var(--font-oswald);
@@ -520,8 +528,11 @@ display: none;
     .about-conversation{
         padding-bottom: 0;
     }
+    .about-conversation-details{
+        padding: 0;
+    }
     .about-conversation .about-conversation-content{
-        padding: 64px 30px;
+        padding: 64px 20px;
     }
     .about-conversation .about-conversation-content h1 br{
         display: none;
