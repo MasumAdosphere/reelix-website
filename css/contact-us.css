@@ -136,6 +136,17 @@ input::-webkit-inner-spin-button {
     margin-bottom: 0;
     color: #292e32;
   }
+  .get-in-touch-text-body .email h6 a,
+  .get-in-touch-text-body .phone h6 a{
+    text-decoration: none;
+    font-family: var(--font-raleway);
+    font-size: var(--font18);
+    font-weight: 600;
+    line-height: 28px;
+    text-align: left;
+    margin-bottom: 0;
+    color: #292e32;
+  }
   .get-in-touch-text-body .adderss .adderss-text,
   .get-in-touch-text-body .email .email-text,
   .get-in-touch-text-body .phone .phone-text {
