@@ -120,7 +120,8 @@ input[type=button] {
 
 
   .client{
-    padding: var(--py100);
+    padding-top: 0;
+    padding-bottom: 100px;
     background-color: #f2f6f8;
     display: flex;
     justify-content: center;
