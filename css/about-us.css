@@ -144,7 +144,7 @@ input[type=button] {
 }
 .about-engagement .about-engagement-content p{
     font-size: 20px;
-    font-weight: 500;
+    font-weight: 600;
     color: var(--light-blue);
     text-align: left;
     font-family: var(--font-raleway);
@@ -392,7 +392,7 @@ input[type=button] {
 }
 @media (768px <=width <=1023px){
 .about-engagement{
-    padding-top: 64px;
+   padding-top: 0;
 }
 .about-engagement .about-engagement-content h1  br{
     display: none;
