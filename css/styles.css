@@ -1,0 +1,446 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+  }
+  *:focus {
+    outline: 0 !important;
+}
+.btn:focus{
+  outline: none;
+  box-shadow: none;
+}
+input[type=button] {
+  outline: none !important;
+  box-shadow: none !important;
+}
+  
+  body {
+    padding: 0;
+    margin: 0;
+  }
+/* NaBar */
+:root {
+  --font-oswald: "Oswald", serif;
+   --font-dmsans: "DM Sans", serif;
+  --font16: 16px;
+  --font18: 18px;
+  --font20: 20px;
+  --font24: 24px;
+  --font28: 28px;
+  --font30: 30px;
+  --font32: 32px;
+  --font36: 36px;
+  --font38: 38px;
+  --font40: 40px;
+  --font48: 48px;
+  --font58: 58px;
+  --font64: 64px;
+  --font72: 72px;
+  --pink: #e27670;
+  --gray54: #545454;
+  --grayAA: #aaaaaa;
+  --grayBB: #bbbbbb;
+  --dark23: #232323;
+  --light-blue: #292e32;
+  --white: #fff;
+  --py100: 100px 0;
+  --py80: 80px 0;
+  --py60: 60px 0;
+  --py64: 64px 0;
+  --py40: 40px 0;
+  --py30: 30px 0;
+  --py24: 24px 0;
+  --mb16: 16px;
+  --mb8: 8px;
+}
+
+/* ############################### NavBar ############################### */
+
+.navbar {
+  display: flex;
+  align-items: center;
+  padding: 14px 0;
+  background-color: var(--white);
+}
+.navbar .nav-link {
+  font-size: var(--font20);
+  font-weight: 600;
+  font-family: var(--font-oswald);
+  line-height: 30px;
+  color: var(--dark23);
+  padding-left: 48px !important;
+  transition: color 1s;
+}
+.navbar .nav-btn {
+  background-color: var(--pink);
+  font-size: var(--font18);
+  font-family: var(--font-oswald);
+  line-height: 26.68px;
+  font-weight: 600;
+  padding: 12px 28px;
+  border-radius: 63px;
+  color: var(--dark23);
+  margin-left: 48px !important;
+  transition:  background-color 1s;
+}
+.navbar .nav-link:hover{
+  color: var(--pink);
+}
+.navbar .nav-btn:hover{
+  background-color: var(--dark23);
+  color: #fff;
+}
+.navbar .nav-btn:focus{
+  outline: none;
+}
+/*  hamburger icon */
+.navbar-toggler {
+  border: 2px solid #ccc;
+}
+.navbar-toggler-icon {
+  border: 2px solid var(--dark23);
+  background-color: #ccc;
+  border-radius: 5px;
+}
+/*  */
+/* Hamburger styles */
+/* Hamburger Icon Styles */
+.hamburger-lines {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 24px;
+  width: 30px;
+}
+
+.hamburger-lines .line {
+  height: 3px;
+  width: 100%;
+  background: #000;
+  transition: all 0.3s ease;
+}
+
+.hamburger-lines.active .line1 {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger-lines.active .line2 {
+  opacity: 0;
+}
+
+.hamburger-lines.active .line3 {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Side Navigation Styles */
+.side-nav {
+  position: fixed;
+  top: 0;
+  left: -100%; /* Initially hide the sidebar off-screen */
+  width: 75%;
+  height: 100%;
+  background: #fff;
+  transition: left 0.3s ease;
+  z-index: 999;
+  padding: 20px;
+}
+
+.side-nav ul {
+  list-style: none;
+  padding: 20px 0;
+}
+
+.side-nav ul li {
+  margin-bottom: 20px;
+}
+
+.side-nav ul li a {
+  text-decoration: none;
+  color: #000;
+  font-size: 18px;
+}
+
+.side-nav ul li .nav-btn {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+/* Body styles when side-nav is open */
+body.side-nav-open {
+  overflow: hidden; /* Prevent scrolling when the side nav is open */
+}
+
+/* ############################### Footer ############################### */
+.footer-section {
+  background-color: var(--dark23);
+  padding: var(--py100);
+}
+.footer-section .footer-info {
+  font-family: var( --font-dmsans);
+  color: var(--grayAA);
+  font-weight: 500;
+  font-size: var(--font18);
+  line-height: 28px;
+  padding: var(--py24);
+  margin: 0;
+}
+.footer-links-col h2,
+.footer-contact-col h2 {
+  color: var(--white);
+  font-family: var(--font-oswald);
+  font-size: var(--font28);
+  font-weight: 600;
+  line-height: 41.5px;
+  text-align: left;
+  margin-bottom: 0;
+  text-transform: uppercase;
+  padding-bottom: 24px;
+}
+.footer-links-col ul,
+.footer-contact-col ul {
+  padding: 0;
+}
+.footer-links-col ul li,
+.footer-contact-col ul li {
+  padding-bottom: 24px;
+}
+.footer-links-col ul li a {
+  text-decoration: none;
+  font-family: var( --font-dmsans);
+  font-size: var(--font18);
+  font-weight: 600;
+  line-height: 28px;
+  text-align: left;
+  color: var(--grayBB);
+}
+.footer-contact-col ul li a {
+  text-decoration: none;
+  font-family: var(--font-oswald);
+  font-size: var(--font18);
+  font-weight: 600;
+  line-height: 28px;
+  text-align: left;
+  color: var(--grayBB);
+}
+.footer-section .social-icon {
+  padding-right: 10px;
+}
+.contact-footer-icon {
+  width: 20px;
+  /* padding-right: 10px; */
+}
+.logo-footer-col ul {
+  padding: 0;
+  text-decoration: none;
+}
+.logo-footer-col ul li {
+  list-style-type: none;
+}
+.logo-footer-col ul li a img {
+  padding-right: 10px;
+  padding-left: 0;
+}
+/*  */
+/* Hamburger styles */
+.hamburger-lines {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 24px;
+  width: 30px;
+}
+
+.hamburger-lines .line {
+  height: 3px;
+  width: 100%;
+  background: #000;
+  transition: all 0.3s;
+}
+
+.hamburger-lines.active .line1 {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger-lines.active .line2 {
+  opacity: 0;
+}
+
+.hamburger-lines.active .line3 {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Side navigation styles */
+.side-nav {
+  position: fixed;
+  padding: 20px 16px;
+  top: 0;
+  left: -100%;
+  width: 90%;
+  height: 100%;
+  background: #fff;
+  transition: left 0.3s ease;
+  z-index: 999;
+}
+
+.side-nav ul {
+  list-style: none;
+  padding: 20px;
+  text-align: center;
+}
+
+.side-nav ul li {
+  margin-bottom: 20px;
+  font-size: var(--font20);
+  font-weight: 600;
+  font-family: var(--font-oswald);
+  line-height: 30px;
+  color: var(--dark23);
+  padding-left: 48px !important;
+}
+
+.side-nav ul li a {
+  text-decoration: none;
+  color: #000;
+  font-size: 18px;
+}
+
+.side-nav ul li .nav-btn {
+  background-color: var(--pink);
+  font-size: var(--font18);
+  font-family: var(--font-oswald);
+  line-height: 26.68px;
+  font-weight: 600;
+  padding: 12px 28px;
+  border-radius: 63px;
+  color: var(--dark23);
+}
+/* Body styles when side-nav is open */
+.side-nav.open {
+  left: 0; /* Show the sidebar */
+  box-shadow: 4px 0px 15px rgba(0, 0, 0, 0.6); /* Add shadow */
+}
+
+body.side-nav-open {
+  overflow: hidden; /* Prevent scrolling when the side nav is open */
+}
+body.side-nav-open::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+  z-index: 998;
+}
+
+
+.loading-effect {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none; /*  Initially hide the loading effect   */
+}
+.iti--inline-dropdown {
+  display: block;
+}
+.loading-effect .loader {
+  position: fixed;
+  background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  z-index: 2000;
+}
+
+.loading-effect .loader img {
+  height: 100px;
+}
+.footer-links{
+  padding-left: 12px;
+}
+
+/* ############################### Responsive ############################### */
+
+@media (1440px <=width <=1600px) {
+}
+
+@media (1200px <=width <=1439px) {
+}
+
+@media (1024px <=width <=1199px) {
+}
+
+@media (768px <=width <=1023px) {
+}
+
+@media (568px <=width <=767px) {
+}
+
+@media (480px <=width <=567px) {
+}
+
+
+@media screen and (max-width: 991px) {
+  .navbar .nav-link {
+    padding-left: 0 !important;
+  }
+  .navbar .nav-btn {
+    margin: 0 !important;
+  }
+  .hamburger-lines {
+    display: flex;
+  }
+
+  .navbar-collapse {
+    display: none;
+  }
+}
+@media (min-width: 992px) {
+  .side-nav ul li{
+    padding-left: 0 !important;
+  }
+}
+@media (768px <=width <=1023px){
+  .footer-section{
+    padding: 36px 0;
+  }
+  .side-nav ul li{
+    padding-left: 0 !important;
+  }
+.footer-section .footer-info br{
+display: none;
+}
+.footer-section .footer-info{
+  font-size: 16px;
+}
+}
+
+@media (320px <=width <=767px) {
+/* footer */
+.footer-section{
+  padding: 64px 0;
+}
+.footer-section .footer-info br{
+  display: none;
+}
+.side-nav ul li{
+  padding-left: 0 !important;
+}
+.footer-links{
+  padding-left: 8px;
+  font-size: 16px;
+}
+}
