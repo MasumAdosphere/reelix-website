@@ -90,3 +90,20 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }, 1000); // Delay of 1 second for the document to load
 });
+
+// active page link color
+document.addEventListener("DOMContentLoaded", function () {
+  setTimeout(() => {
+    const navItems = document.querySelectorAll(".nav-link");
+    // Get the current URL path
+    const currentPath = window.location.pathname;
+
+    navItems.forEach(function (navItem) {
+      // Compare the href of each nav link with the current path
+      if (navItem.getAttribute("href") === currentPath) {
+        // If it matches, add the 'active' class to the parent 'li' element
+        navItem.closest(".nav-item").classList.add("active");
+      }
+    });
+  }, 100);
+});
