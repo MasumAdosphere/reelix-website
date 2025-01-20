@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Reelix | Contact Us</title>
     <link
+      rel="shortcut icon"
+      href="../assets/images/favicon.png"
+      type="image/x-icon"
+    />
+    <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
@@ -44,8 +49,8 @@
               <h1>Contact Us</h1>
               <p>
                 <a href="/">Home </a>
-                <img src="/assets/images/arrow_forward_ios.svg" alt="icon" /> Contact
-                Us
+                <img src="/assets/images/arrow_forward_ios.svg" alt="icon" />
+                Contact Us
               </p>
             </div>
           </div>
@@ -70,7 +75,10 @@
                 <div class="row d-flex align-items-center">
                   <div class="col-lg-12">
                     <div class="adderss">
-                      <img src="/assets/images/address-contact.svg" alt="icon" />
+                      <img
+                        src="/assets/images/address-contact.svg"
+                        alt="icon"
+                      />
                       <div class="adderss-text" class="img-fluid">
                         <h4>Address</h4>
                         <h6>Slick insights. Zero-effort tracking.</h6>
@@ -80,14 +88,20 @@
                       <img src="/assets/images/mail-contatct.svg" alt="icon" />
                       <div class="email-text" class="img-fluid">
                         <h4>Email</h4>
-                        <h6>support@reelix.ai</h6>
+                        <h6>
+                          <a href="mailto:support@reelix.ai"
+                            >support@reelix.ai</a
+                          >
+                        </h6>
                       </div>
                     </div>
                     <div class="phone">
                       <img src="/assets/images/phone-contact.svg" alt="icon" />
                       <div class="phone-text" class="img-fluid">
                         <h4>Phone</h4>
-                        <h6>+91 +98765 43210</h6>
+                        <h6>
+                          <a href="tel:+919876543210">+91 +98765 43210</a>
+                        </h6>
                       </div>
                     </div>
                   </div>
@@ -102,13 +116,14 @@
                   <label for="name">Name</label>
                   <input
                     type="text"
-                    title="Enter Your Name"
+                    title="Enter first Name"
                     name="name"
                     data-bs-toggle="tooltip"
                     data-bs-placement="bottom"
                     required
+                    autocomplete="off"
                     value=""
-                    placeholder="Enter first name"
+                    placeholder="Enter your name"
                   /><span id="errorName" class="hide" style="color: red"></span>
                 </div>
                 <div class="form-items">
@@ -120,8 +135,9 @@
                     name="email"
                     title="Enter email"
                     value=""
+                    autocomplete="off"
                     required
-                    placeholder="Enter your email"
+                    placeholder="Enter email"
                   /><span
                     id="errorEmail"
                     class="hide"
@@ -131,14 +147,12 @@
                 <div class="form-items">
                   <label for="">Phone Number</label>
                   <input
+                    autocomplete="tel"
                     type="tel"
-                    autocomplete="on"
-                    name="phone"
-                    data-bs-toggle="tooltip"
-                    data-bs-placement="bottom"
+                    name="Number"
                     class="international-number"
-                    title="Enter Your Phone Number"
-                    placeholder="Number"
+                    title="Please enter valid phone number"
+                    placeholder="Enter your phone number"
                     required
                     id="phone"
                   />
@@ -156,16 +170,19 @@
                   <textarea
                     type="text"
                     rows="3"
+                    autocomplete="off"
                     title="Write a message"
                     required
                     name="message"
-                    placeholder="Message"
+                    placeholder="Write a message"
                     data-bs-toggle="tooltip"
                     data-bs-placement="bottom"
                   ></textarea>
                 </div>
                 <div class="">
-                  <button class="btn" type="submit" id="send-message">Submit</button>
+                  <button class="btn" type="submit" id="send-message">
+                    Submit
+                  </button>
                 </div>
               </form>
             </div>
@@ -182,14 +199,6 @@
     <div include-html="footer.html" id="footer_file"></div>
     <!-- script -->
 
-    <script>
-      var tooltipTriggerList = [].slice.call(
-        document.querySelectorAll('[data-bs-toggle="tooltip"]')
-      );
-      var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-        return new bootstrap.Tooltip(tooltipTriggerEl);
-      });
-    </script>
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
       integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
@@ -200,11 +209,18 @@
       integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
       crossorigin="anonymous"
     ></script>
-
+    <script>
+      var tooltipTriggerList = [].slice.call(
+        document.querySelectorAll('[data-bs-toggle="tooltip"]')
+      );
+      var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl);
+      });
+    </script>
     <!-- <script src="js/e-mail.js"></script> -->
     <script src="js/phoneNumberValidation.js"></script>
-
     <script src="js/fixNavbar.js"></script>
+
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
       integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
@@ -212,15 +228,57 @@
       referrerpolicy="no-referrer"
     ></script>
     <script>
+      function validateContactForm() {
+        const name = document.querySelector('input[name="name"]').value.trim();
+        const email = document
+          .querySelector('input[name="email"]')
+          .value.trim();
+        const number = document
+          .querySelector('input[name="Number"]')
+          .value.trim();
+        var errorName = document.getElementById("errorName");
+        var errorEmail = document.getElementById("errorEmail");
+        var phoneError = document.getElementById("error-msg");
+
+        const namePattern = /^[A-Za-z -]+$/;
+        if (name === "" || !namePattern.test(name)) {
+          errorName.innerHTML = "Invalid Name";
+          return false;
+        } else {
+          errorName.innerHTML = "";
+        }
+        if (email === "") {
+          errorEmail.innerHTML = "Enter email properly";
+          return false;
+        } else {
+          errorEmail.innerHTML = "";
+        }
+        if (number === "" || phoneError.innerHTML !== "") {
+          phoneError.innerHTML = "Enter valid phone number";
+          return false;
+        } else {
+          phoneError.innerHTML = "";
+        }
+        return true;
+      }
+      document.getElementById("phone").addEventListener("input", function (e) {
+        this.value = this.value.replace(/[^0-9]/g, "");
+      });
+
       document
         .getElementById("contact-us-form")
         .addEventListener("submit", async (e) => {
-          e.preventDefault(); // Prevent the default form submission
+          e.preventDefault();
+          if (!validateContactForm()) {
+            return;
+          }
 
-          // Phone validation check
-          const phoneInput = document.querySelector("#phone");
+          const input = document.querySelector("#phone");
+          // const button = document.querySelector('#btn')
           const errorMsg = document.querySelector("#error-msg");
           const validMsg = document.querySelector("#valid-msg");
+
+          // here, the index maps to the error code returned from getValidationError - see readme
           const errorMap = [
             "Invalid number",
             "Invalid country code",
@@ -228,58 +286,49 @@
             "Too long",
             "Invalid number"
           ];
-          const iti = window.intlTelInput(phoneInput, {
+
+          // initialise plugin
+          const iti = window.intlTelInput(input, {
             initialCountry: "in",
             utilsScript:
               "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/19.2.16/js/utils.js"
           });
 
-          const resetPhoneValidation = () => {
-            phoneInput.classList.remove("error");
+          const reset = () => {
+            input.classList.remove("error");
             errorMsg.innerHTML = "";
             errorMsg.classList.add("hide");
             validMsg.classList.add("hide");
           };
 
-          resetPhoneValidation(); // Reset phone validation before checking
+          // on click button: validate
+          input.addEventListener("change", () => {
+            reset();
+            if (!input.value.trim()) {
+              showError("Required");
+            } else if (iti.isValidNumberPrecise()) {
+              validMsg.classList.remove("hide");
+            } else {
+              const errorCode = iti.getValidationError();
+              const msg = errorMap[errorCode] || "Invalid number";
+              showError(msg);
+            }
+          });
 
-          if (!phoneInput.value.trim() || !iti.isValidNumber()) {
-            const errorCode = iti.getValidationError();
-            errorMsg.innerHTML = errorMap[errorCode] || "Invalid number";
-            errorMsg.classList.remove("hide");
-            phoneInput.classList.add("error");
-            phoneInput.focus(); // Set focus to the phone input field
-            return; // Stop form submission if phone number is invalid
-          }
-
-          const phoneNumber = iti.getNumber(); // Get the formatted phone number
-          if (phoneNumber.length < 10 || phoneNumber.length > 15) {
-            errorMsg.innerHTML =
-              "Phone number must be between 10 and 15 digits.";
-            errorMsg.classList.remove("hide");
-            phoneInput.classList.add("error");
-            phoneInput.focus(); // Set focus to the phone input field
-            return; // Stop form submission if length is invalid
-          }
-
-          // Show the loading spinner
           document.getElementById("loadingElementId").style.display = "block";
 
-          // Get form data
           const formData = {
             name: document.querySelector('input[name="name"]').value,
             email: document.querySelector('input[name="email"]').value,
-            phone: phoneInput.value,
+            phone: input.value,
             message: document.querySelector('textarea[name="message"]').value
           };
 
-          // Web App URL from Apps Script
           const scriptURL =
             "https://script.google.com/macros/s/AKfycbxeIrbnWIpuECKgwIJzId4qlL5pHxIQe_pUxCddhyb6BtyxmTEh3AfnpRI396Wb7H4p/exec"; // Replace with your Web App URL
 
           try {
-            // Send the form data to the Apps Script
-            const response = await fetch(scriptURL, {
+            await fetch(scriptURL, {
               method: "POST",
               mode: "no-cors",
               headers: { "Content-Type": "application/json" },
@@ -290,13 +339,13 @@
 
             document.querySelector('input[name="name"]').value = "";
             document.querySelector('input[name="email"]').value = "";
-            phoneInput.value = "";
+            input.value = "";
             document.querySelector('textarea[name="message"]').value = "";
-            resetPhoneValidation();
+            reset();
           } catch (error) {
+            console.log(error);
             alert("Error: Unable to send the message. Please try again later.");
           } finally {
-            // Hide the loading spinner
             document.getElementById("loadingElementId").style.display = "none";
           }
         });
@@ -310,7 +359,5 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script> -->
-
-    <!-- Google Tag Manager -->
   </body>
 </html>

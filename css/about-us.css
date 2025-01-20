@@ -1,6 +1,6 @@
 @charset "UTF-8";
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
 * {
     padding: 0;
     margin: 0;
@@ -28,7 +28,7 @@ input[type=button] {
   
   :root {
     --font-oswald: "Oswald", serif;
-    --font-raleway: "Raleway", serif;
+    --font-dmsans: "DM Sans", serif;
     --font16: 16px;
     --font18: 18px;
     --font20: 20px;
@@ -78,7 +78,7 @@ input[type=button] {
     text-transform: uppercase;
   }
   .page-heading .page-info a {
-    font-family: var(--font-raleway);
+    font-family: var(--font-dmsans);
     font-size: var(--font20);
     font-weight: 500;
     line-height: 28px;
@@ -87,7 +87,7 @@ input[type=button] {
     text-transform: uppercase;
   }
   .page-heading .page-info p {
-    font-family: var(--font-raleway);
+    font-family: var(--font-dmsans);
     font-size: var(--font20);
     font-weight: 500;
     line-height: 28px;
@@ -123,7 +123,6 @@ input[type=button] {
 
 /*-----about-engagement-----*/
   .about-engagement{
-    padding-top: 100px;
     background-color: #F2F6F8;
     display: flex;
     justify-content: center;
@@ -142,13 +141,14 @@ input[type=button] {
     margin-bottom: 16px;
     font-weight: 500;
     margin-bottom: 16px;
+    text-transform: uppercase;
 }
 .about-engagement .about-engagement-content p{
     font-size: 20px;
-    font-weight: 500;
+    font-weight: 600;
     color: var(--light-blue);
     text-align: left;
-    font-family: var(--font-raleway);
+    font-family: var(--font-dmsans);
     margin-bottom: 32px;
 }
 .about-engagement .about-engagement-content button {
@@ -162,6 +162,11 @@ input[type=button] {
     color: var(--dark23);
     margin-bottom: 40px;
     width: 116px;
+  transition:  background-color 1s;
+}
+.about-engagement .about-engagement-content button:hover{
+    background-color: var(--dark23);
+    color: #fff;
 }
 .about-engagement .about-engagement-content button:focus{
     outline: none;
@@ -184,6 +189,7 @@ input[type=button] {
     font-family: var(--font-oswald);
     color: var(--pink);
     font-size: 44px;
+    text-transform: uppercase;
     font-weight: 500;
 }
 
@@ -200,14 +206,15 @@ input[type=button] {
 .about-conversation{
     background-color: #f2f6f8;
 }
-.about-conversation .about-conversation-content{
+.about-conversation-details{
     height: 100%;
-    padding: 0px 80px;
+    padding: 0px 75px;
     display: flex;
     flex-direction: column;
    justify-content: center;
    background-color: var(--pink);
 }
+
 .about-conversation .about-conversation-content h1{
     font-family: var(--font-oswald);
     color: var(--dark23);
@@ -222,7 +229,7 @@ input[type=button] {
     font-weight: 500;
     color: var(--light-blue);
     text-align: left;
-    font-family: var(--font-raleway);
+    font-family: var(--font-dmsans);
     margin-bottom: 32px;
 }
 .about-conversation .about-conversation-content p span{ 
@@ -238,6 +245,11 @@ input[type=button] {
     color: var(--dark23);
     width: 119px;
     border: 1px solid var(--dark23);
+  transition:  background-color 1s;
+}
+.about-conversation .about-conversation-content button:hover{
+    background-color: var(--dark23);
+    color: #fff;
 }
 .about-conversation-video{
     display: flex;
@@ -269,23 +281,16 @@ input[type=button] {
 }
 .about-partners-images{
     display: flex;
+    gap: 16px;
     flex-wrap: wrap;
-    justify-content: space-between;
     align-items: center;
 }
-.about-partners-logos{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #fff;
-    border-radius: 8px;
-    padding: 18px 48px;
-}
+
 /* influence-banner */
 .influence-banner{
     padding-top: 0;
     padding-bottom: 100px;
-    background-color: var(--bgcolor);
+    background-color: #f2f6f8;
     width: 100%;
 }
 .influence-banner-content{
@@ -392,7 +397,7 @@ input[type=button] {
 }
 @media (768px <=width <=1023px){
 .about-engagement{
-    padding-top: 64px;
+   padding-top: 0;
 }
 .about-engagement .about-engagement-content h1  br{
     display: none;
@@ -432,8 +437,8 @@ display: none;
    padding-bottom: 50px;
 }
 .about-partners-images{
-    justify-content: flex-start;
-    gap: 24px;
+    justify-content: center;
+    gap: 16px;
 }
 .about-partners-content h3{
     font-size: 32px;
@@ -481,10 +486,11 @@ display: none;
     }
     .blog-line-art::before{
         margin-top: 16px;
+        font-size: 68px;
     }
     /*about-engagement  */
     .about-engagement{
-        padding-top: 32px;
+        padding-top: 0px;
        padding-bottom: 32px;
     }
     .about-engagement-video video{
@@ -520,8 +526,11 @@ display: none;
     .about-conversation{
         padding-bottom: 0;
     }
+    .about-conversation-details{
+        padding: 0;
+    }
     .about-conversation .about-conversation-content{
-        padding: 64px 30px;
+        padding: 64px 20px;
     }
     .about-conversation .about-conversation-content h1 br{
         display: none;

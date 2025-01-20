@@ -1,6 +1,6 @@
 @charset "UTF-8";
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');* 
 * {
     padding: 0;
     margin: 0;
@@ -25,7 +25,7 @@ input[type=button] {
   
   :root {
     --font-oswald: "Oswald", serif;
-    --font-raleway: "Raleway", serif;
+    --font-dmsans: "DM Sans", serif;
     --font16: 16px;
     --font18: 18px;
     --font20: 20px;
@@ -75,7 +75,7 @@ input[type=button] {
     text-transform: uppercase;
   }
   .page-heading .page-info a {
-    font-family: var(--font-raleway);
+    font-family: var(--font-dmsans);
     font-size: var(--font20);
     font-weight: 500;
     line-height: 28px;
@@ -84,7 +84,7 @@ input[type=button] {
     text-transform: uppercase;
   }
   .page-heading .page-info p {
-    font-family: var(--font-raleway);
+    font-family: var(--font-dmsans);
     font-size: var(--font20);
     font-weight: 500;
     line-height: 28px;
@@ -120,7 +120,8 @@ input[type=button] {
 
 
   .client{
-    padding: var(--py100);
+    padding-top: 0;
+    padding-bottom: 100px;
     background-color: #f2f6f8;
     display: flex;
     justify-content: center;
@@ -144,7 +145,7 @@ input[type=button] {
 }
 
 .case-study-content h4{
-    font-family: var(--font-raleway);
+    font-family: var(--font-dmsans);
     font-weight: 600;
     color: var(--pink);
     font-size: 18px;
@@ -172,16 +173,16 @@ input[type=button] {
     background-color: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(50px);
     display: flex;
-    width: 90%;
+    width: 94%;
     border-radius: 8px;
     background-color: #fff;
     justify-content: space-between;
 }
 .case-study-video-insights-details h3{
-    font-family: var(--font-raleway);
+    font-family: var(--font-dmsans);
     font-weight: 600;
     color: var(--pink);
-    font-size: 16px;
+    font-size: 15px;
     margin-bottom: 0px;
     text-transform: uppercase;
 }
@@ -202,7 +203,7 @@ input[type=button] {
     text-transform: uppercase;
     font-size: var(--font48);
     font-family: var(--font-oswald);
-    font-weight: 500;
+    font-weight: 600;
     color: var(--dark23);
 }
 .influence-banner{
@@ -294,7 +295,8 @@ input[type=button] {
 }
 @media (768px <=width <=1023px){
     .client{
-        padding: 64px 0;
+        padding-top: 0;
+        padding-bottom: 64px;
     }
     .case-study-content p{
         font-size: 22px;
@@ -348,7 +350,7 @@ input[type=button] {
     }
     .blog-line-art::before{
         margin-top: 16px;
-        font-size: 86px;
+        font-size: 68px;
     }
 
     .client{
