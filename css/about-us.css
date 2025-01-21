@@ -283,6 +283,7 @@ input[type=button] {
     display: flex;
     gap: 16px;
     flex-wrap: wrap;
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -436,6 +437,12 @@ display: none;
    padding-top: 0;
    padding-bottom: 50px;
 }
+.about-partners-logos {
+    width: calc(50% - 8px);
+}
+.about-partners-logos img{
+    width: 100%;
+}
 .about-partners-images{
     justify-content: center;
     gap: 16px;
@@ -566,8 +573,7 @@ display: none;
         gap: 16px;
     }
     .about-partners-logos{
-        width: 170px;
-        height: 68px;
+        width: auto;
         padding: 0;
     }
     .about-partners-logos img{
