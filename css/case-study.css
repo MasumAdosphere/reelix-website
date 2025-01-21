@@ -170,12 +170,12 @@ input[type=button] {
     padding: 12px 20px;
     position: absolute;
     bottom: 16px;
-    background-color: rgba(255, 255, 255, 0.05);
+    background-color: var(--dark23);
     backdrop-filter: blur(50px);
     display: flex;
     width: 94%;
     border-radius: 8px;
-    background-color: #fff;
+
     justify-content: space-between;
 }
 .case-study-video-insights-details h3{
@@ -189,7 +189,7 @@ input[type=button] {
 .case-study-video-insights-details h4{
     font-family: var(--font-oswald);
     font-weight: 600;
-    color: var(--dark23);
+    color: #fff;
     font-size: 28px;
     margin-bottom: 0px;
     text-transform: uppercase;
